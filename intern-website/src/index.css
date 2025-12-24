@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ================================
+   FONT FACE DEFINITIONS
+   ================================ */
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("/src/assets/fonts/ITC-Avant-Garde/ITC\ Avant\ Garde\ Gothic\ CE\ Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("/src/assets/fonts/ITC-Avant-Garde/ITC\ Avant\ Garde\ Gothic\ Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("/src/assets/fonts/ITC-Avant-Garde/ITC\ Avant\ Garde\ Gothic\ Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/src/assets/fonts/Avenir-Next/Avenir\ Next\ LT\ Pro\ Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/src/assets/fonts/Avenir-Next/Avenir\ Next\ LT\ Pro\ It.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/src/assets/fonts/Avenir-Next/Avenir\ Next\ LT\ Pro\ Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ================================
+   GLOBAL STYLES
+   ================================ */
+
+@theme {
+  --font-sans: "AvenirNext", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-heading: "AvantGarde", "AvenirNext", system-ui, sans-serif;
+
+  /* Negam brand colors */
+  --color-brand-primary: #008865;      /* GRUN */
+  --color-brand-dark: #084F25;         /* Dark Green */
+  --color-brand-accent: #83c714;       /* Vibrant Green */
+  --color-brand-white: #ffffff;
+}
+
+/* base + helper */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-brand-dark);        /* was blue */
+  background-color: var(--color-brand-white);
+}
+
+.h-heading {
+  font-family: var(--font-heading);
+}
