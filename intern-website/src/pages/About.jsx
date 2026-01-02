@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AboutOverview from "../components/AboutSection/AboutOverview";
 import MissionVision from "../components/AboutSection/MissionVision";
 import ValueChainApproach from "../components/AboutSection/ValueChainApproach";
-import Contactstrip from "../components/Contactstrip";
+import ContactStrip from "../components/ContactStrip";
 
 const SECTIONS = [
   { id: "overview", label: "Overview" },
@@ -110,7 +110,7 @@ const About = () => {
 
         </div>
       </section>
-      <Contactstrip />
+      <ContactStrip />
     </main>
   );
 };
