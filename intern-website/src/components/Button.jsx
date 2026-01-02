@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({
   children = "Enquire Now",
-  variant = "primary", // can extend later
+  // variant = "primary", // can extend later
   className = "",
   as = "button",
   ...props
@@ -23,14 +23,14 @@ const Button = ({
     <Component className={combined} {...props}>
       {/* base background = GRUN (#008865) */}
       <span
-        className="absolute inset-0 rounded-full bg-[color:var(--color-brand-primary)]"
+        className="absolute inset-0 rounded-full bg-brand-primary"
         aria-hidden="true"
       />
       {/* overlay = dark green (#084f25), width 0 → 100% on hover/tap */}
       <span
         className="
           w-0 absolute inset-0 rounded-full
-          bg-[color:var(--color-brand-dark)]
+          bg-brand-dark
           transition-all duration-300 ease-out
           group-hover:w-full group-active:w-full
         "

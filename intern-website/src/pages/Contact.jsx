@@ -8,23 +8,23 @@ const Contact = () => {
       <section className="mx-auto max-w-7xl px-6 py-20">
         {/* SECTION HEADING */}
         <div className="mb-14 text-center">
-          <p className="mb-2 font-heading text-sm uppercase tracking-[0.25rem] text-[color:var(--color-brand-primary)]">
+          <p className="mb-2 font-heading text-sm uppercase tracking-[0.25rem] text-brand-primary">
             Get In Touch
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl text-[color:var(--color-brand-dark)]">
+          <h1 className="font-heading text-4xl md:text-5xl text-brand-dark">
             Let&apos;s Start a Conversation
           </h1>
-          <p className="mt-4 text-sm md:text-base text-[color:var(--color-brand-dark)]/70 max-w-2xl mx-auto">
+          <p className="mt-4 text-sm md:text-base text-brand-dark/70 max-w-2xl mx-auto">
             Share your requirements with the Negam team and we&apos;ll respond within one business day.
           </p>
         </div>
 
         {/* OUTER CONTAINER */}
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-[color:var(--color-brand-primary)]/10">
+        <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-brand-primary/10">
           {/* FLEX LAYOUT */}
           <div className="flex flex-col lg:flex-row">
             {/* LEFT: Corporate Office + Map */}
-            <div className="w-full lg:w-[380px] bg-[color:var(--color-brand-dark)] px-8 md:px-10 py-10 md:py-12 text-white">
+            <div className="w-full lg:w-95 bg-brand-dark px-8 md:px-10 py-10 md:py-12 text-white">
               <h2 className="mb-6 font-heading text-2xl">
                 Corporate Office
               </h2>
@@ -60,7 +60,7 @@ const Contact = () => {
                 </span>
                 <a
                   href="mailto:info@stemztech.com"
-                  className="underline-offset-2 hover:underline hover:text-[color:var(--color-brand-accent)] transition-colors"
+                  className="underline-offset-2 hover:underline hover:text-brand-accent transition-colors"
                 >
                   info@stemztech.com
                 </a>
@@ -68,8 +68,10 @@ const Contact = () => {
             </div>
 
             {/* RIGHT: Enquire Now */}
-            <div className="flex-1 px-6 md:px-10 py-10 md:py-12 bg-[color:var(--color-brand-accent)]/5">
-              <h2 className="mb-8 font-heading text-3xl text-[color:var(--color-brand-dark)]">
+            <div className="flex-1 px-6 md:px-10 py-10 md:py-12 bg-brand-accent/5">
+              <h2 className="mb-8 font-heading text-3xl text-brand-dark"
+              id="contact-strip"
+              >
                 Enquire Now
               </h2>
 

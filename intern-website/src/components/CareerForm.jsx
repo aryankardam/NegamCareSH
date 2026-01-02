@@ -101,7 +101,7 @@ const CareerForm = () => {
       <div>
         <label
           htmlFor="career-name"
-          className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+          className="block text-sm font-medium text-brand-dark mb-1"
         >
           Full Name *
         </label>
@@ -129,7 +129,7 @@ const CareerForm = () => {
         <div>
           <label
             htmlFor="career-email"
-            className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+            className="block text-sm font-medium text-brand-dark mb-1"
           >
             Email *
           </label>
@@ -156,7 +156,7 @@ const CareerForm = () => {
         <div>
           <label
             htmlFor="career-phone"
-            className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+            className="block text-sm font-medium text-brand-dark mb-1"
           >
             Phone *
           </label>
@@ -184,7 +184,7 @@ const CareerForm = () => {
       <div>
         <label
           htmlFor="career-position"
-          className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+          className="block text-sm font-medium text-brand-dark mb-1"
         >
           Position Applied For
         </label>
@@ -202,7 +202,7 @@ const CareerForm = () => {
       <div>
         <label
           htmlFor="career-resume"
-          className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+          className="block text-sm font-medium text-brand-dark mb-1"
         >
           Resume (PDF / DOC) *
         </label>
@@ -213,9 +213,9 @@ const CareerForm = () => {
           onChange={handleResumeChange}
           className={`
             block w-full text-sm text-gray-700
-            file:mr-4 file:rounded-full file:border-0 file:bg-[color:var(--color-brand-primary)]
+            file:mr-4 file:rounded-full file:border-0 file:bg-brand-primary
             file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white
-            file:hover:bg-[color:var(--color-brand-accent)]
+            file:hover:bg-brand-accent
             cursor-pointer
           `}
           aria-invalid={!!errors.resume}
@@ -232,7 +232,7 @@ const CareerForm = () => {
       <div>
         <label
           htmlFor="career-message"
-          className="block text-sm font-medium text-[color:var(--color-brand-dark)] mb-1"
+          className="block text-sm font-medium text-brand-dark mb-1"
         >
           Message
         </label>
@@ -253,11 +253,11 @@ const CareerForm = () => {
         disabled={isSubmitting}
         className="
           inline-flex items-center justify-center
-          rounded-full bg-[color:var(--color-brand-primary)]
+          rounded-full bg-brand-primary
           px-8 py-3 text-white uppercase tracking-[0.2em] text-xs md:text-sm
-          hover:bg-[color:var(--color-brand-accent)]
+          hover:bg-brand-accent
           disabled:opacity-60 disabled:cursor-not-allowed
-          focus:outline-none focus:ring-4 focus:ring-[color:var(--color-brand-primary)]/40
+          focus:outline-none focus:ring-4 focus:ring-brand-primary/40
           focus:ring-offset-2 focus:ring-offset-white
           transition-all duration-200
         "

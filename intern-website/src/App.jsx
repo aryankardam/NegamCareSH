@@ -5,7 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
+import { Home } from "./pages/Home";
 import About from "./pages/About";
 import ServicesPage from "./pages/ServicesPage";
 import Contact from "./pages/Contact";

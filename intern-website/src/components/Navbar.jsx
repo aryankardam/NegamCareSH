@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/Negam.svg";
 import Button from "./Button";
@@ -12,12 +12,13 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
   const [mobileOpen, setMobileOpen] = useState(false);
   const itemRefs = useRef({});
   const location = useLocation();
   const navigate = useNavigate();
+
+  const active = navItems.find((item) => item.path === location.pathname)?.label || "Home";
 
   /* -------------------------------
     Scroll helpers
@@ -48,9 +49,7 @@ const Navbar = () => {
   /* -------------------------------
     Sync active label with URL
   -------------------------------- */
-  useEffect(() => {
-    const match = navItems.find((item) => item.path === location.pathname);
-    if (match) setActive(match.label);
+  useLayoutEffect(() => {
     setMobileOpen(false);
   }, [location.pathname]);
 
@@ -81,7 +80,6 @@ const Navbar = () => {
   };
 
   const handleNavClick = (label, path) => {
-    setActive(label);
     setMobileOpen(false);
 
     if (location.pathname === path) {
@@ -92,7 +90,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#dbedf0] border-b border-[color:var(--color-brand-primary)]/20">
+    <header className="sticky top-0 z-50 w-full bg-[#dbedf0] border-b border-brand-primary/20">
       {/* TOP BAR */}
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-8">
         {/* LEFT: mobile menu button + logo */}
@@ -100,24 +98,24 @@ const Navbar = () => {
           {/* MOBILE MENU TOGGLE (hidden on md+) */}
           <button
             type="button"
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-[color:var(--color-brand-dark)]"
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-brand-dark"
             aria-label="Toggle navigation"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {/* animated hamburger / close icon */}
             <div className="relative h-4 w-5">
               <span
-                className={`absolute top-0 h-[2px] w-5 bg-current transition-all ${
+                className={`absolute top-0 h-0.5 w-5 bg-current transition-all ${
                   mobileOpen ? "rotate-45 top-2" : ""
                 }`}
               />
               <span
-                className={`absolute top-2 h-[2px] w-5 bg-current transition-all ${
+                className={`absolute top-2 h-0.5 w-5 bg-current transition-all ${
                   mobileOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`absolute top-4 h-[2px] w-5 bg-current transition-all ${
+                className={`absolute top-4 h-0.5 w-5 bg-current transition-all ${
                   mobileOpen ? "-rotate-45 top-2" : ""
                 }`}
               />
@@ -142,9 +140,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-16">
           {/* NAV AREA WITH BASE LINE + ACTIVE INDICATOR */}
           <div className="relative flex h-20 items-center">
-            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gray-200" />
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200" />
             <div
-              className="absolute bottom-0 translate-y-[1px] h-[3px] bg-[color:var(--color-brand-primary)] transition-all duration-200"
+              className="absolute bottom-0 translate-y-px h-0.75 bg-brand-primary transition-all duration-200"
               style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
             />
 
@@ -159,11 +157,11 @@ const Navbar = () => {
                     onClick={() => handleNavClick(item.label, item.path)}
                     className={`
                       h-heading text-lg font-semibold tracking-wide
-                      text-[color:var(--color-brand-dark)] transition-colors
+                      text-brand-dark transition-colors
                       ${
                         isActive
-                          ? "text-[color:var(--color-brand-primary)]"
-                          : "hover:text-[color:var(--color-brand-accent)]"
+                          ? "text-brand-primary"
+                          : "hover:text-brand-accent"
                       }
                     `}
                   >
@@ -192,7 +190,7 @@ const Navbar = () => {
             className="
               h-heading rounded-full px-4 py-2
               text-xs uppercase tracking-[0.12rem]
-              text-white bg-[color:var(--color-brand-primary)] shadow-md
+              text-white bg-brand-primary shadow-md
             "
           >
             Enquire Now
@@ -225,8 +223,8 @@ const Navbar = () => {
                   transition-colors
                   ${
                     isActive
-                      ? "text-[color:var(--color-brand-primary)]"
-                      : "text-[color:var(--color-brand-dark)] hover:text-[color:var(--color-brand-accent)]"
+                      ? "text-brand-primary"
+                      : "text-brand-dark hover:text-brand-accent"
                   }
                 `}
               >

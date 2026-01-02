@@ -2,8 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test-env": "node -e \"require('dotenv').config(); console.log(process.env.SMTP_USER)\"",
+    "health": "curl http://localhost:5000/api/health"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
     "nodemailer": "^7.0.12",
     "nodemon": "^3.1.11"
   }
