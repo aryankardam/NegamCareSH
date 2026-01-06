@@ -63,7 +63,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <div className="w-full max-w-4xl text-center">
+        <div className="w-full max-w-4xl text-left">
           {/* Hiring Badge */}
           <motion.div
             className="inline-flex items-center justify-center gap-3 mb-8 md:mb-12 px-8 py-4 bg-brand-white/20 backdrop-blur-xl rounded-2xl border border-brand-white/40 text-brand-white text-sm md:text-base font-bold uppercase tracking-[0.3em]"
