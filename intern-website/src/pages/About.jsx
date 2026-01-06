@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import AboutHero from "../components/AboutSection/AboutHero";
 import AboutOverview from "../components/AboutSection/AboutOverview";
 import MissionVision from "../components/AboutSection/MissionVision";
 import ValueChainApproach from "../components/AboutSection/ValueChainApproach";
@@ -23,7 +25,8 @@ const About = () => {
         });
       },
       {
-        rootMargin: "-30% 0px -50% 0px", // controls trigger point
+        rootMargin: "-25% 0px -45% 0px",
+        threshold: 0.1,
       }
     );
 
@@ -36,80 +39,131 @@ const About = () => {
   }, []);
 
   const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    document
+      .getElementById(id)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <main className="bg-[color:var(--color-brand-white)]">
-      {/* Header */}
-      <section className="border-b border-[color:var(--color-brand-dark)]/10">
-        <div className="mx-auto max-w-7xl px-6 py-10">
-          <h1 className="font-heading text-3xl md:text-4xl text-[color:var(--color-brand-dark)]">
-            About us
-          </h1>
-        </div>
-      </section>
+    <main className="bg-brand-white min-h-screen">
+      {/* Hero Header */}
+      <motion.section
+        className="border-b border-brand-dark/5 relative overflow-hidden"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <AboutHero />
+      </motion.section>
 
-      {/* Content */}
-      <section className="mx-auto max-w-7xl px-6 py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12">
+      {/* Content Grid */}
+      <section className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-20 lg:py-24 relative">
+        <motion.div
+          className="absolute inset-0 bg-linear-to-br from-transparent via-brand-white/50 to-transparent -z-10"
+          animate={{
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+          }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
+        />
 
-          {/* Sidebar */}
-          <aside className="hidden lg:block sticky top-28 self-start">
-            <nav className="space-y-6">
-              {SECTIONS.map(({ id, label }) => {
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,260px)_1fr] xl:grid-cols-[minmax(0,280px)_1fr] gap-8 lg:gap-12 xl:gap-16">
+          {/* Animated Sidebar */}
+          <motion.aside
+            className="hidden lg:flex lg:flex-col sticky top-24 md:top-28 self-start pt-8"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <nav className="space-y-5 lg:space-y-6">
+              {SECTIONS.map(({ id, label }, index) => {
                 const isActive = activeSection === id;
                 return (
-                  <button
+                  <motion.button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="group flex items-start gap-4 w-full text-left"
+                    className="group flex items-start gap-3 w-full text-left p-3 rounded-xl 
+                               hover:bg-brand-primary/5 focus:outline-none focus:ring-2 
+                               focus:ring-brand-primary/30 focus:ring-offset-2 transition-all duration-300"
+                    whileHover={{ 
+                      scale: 1.02, 
+                      backgroundColor: "rgba(var(--color-brand-primary-rgb), 0.08)" 
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    {/* Active Indicator Line */}
-                    <span
-                      className={`mt-1 h-5 w-1 rounded-full transition-all
-                        ${isActive
-                          ? "bg-[color:var(--color-brand-primary)]"
-                          : "bg-transparent group-hover:bg-[color:var(--color-brand-primary)]/30"
-                        }`}
+                    {/* Active Indicator */}
+                    <motion.span
+                      className="mt-2 h-6 w-1.5 rounded-full bg-brand-primary/30 
+                                 group-hover:bg-brand-primary/60 shrink-0"
+                      animate={{
+                        height: isActive ? "2.5rem" : "1.5rem",
+                        backgroundColor: isActive 
+                          ? "rgb(var(--color-brand-primary-rgb))" 
+                          : "rgb(var(--color-brand-primary-rgb) / 0.4)",
+                      }}
+                      transition={{ duration: 0.3 }}
                     />
 
                     {/* Label */}
-                    <span
-                      className={`text-sm font-medium transition-colors
-                        ${isActive
-                          ? "text-[color:var(--color-brand-primary)]"
-                          : "text-[color:var(--color-brand-dark)]/70 group-hover:text-[color:var(--color-brand-primary)]"
-                        }`}
+                    <motion.span
+                      className="text-sm md:text-base font-medium leading-tight 
+                                 text-brand-dark/75 group-hover:text-brand-dark"
+                      animate={{
+                        color: isActive 
+                          ? "rgb(var(--color-brand-primary-rgb))" 
+                          : "rgb(0 0 0 / 0.75)",
+                        fontWeight: isActive ? 700 : 500,
+                      }}
+                      transition={{ duration: 0.3 }}
                     >
                       {label}
-                    </span>
-                  </button>
+                    </motion.span>
+                  </motion.button>
                 );
               })}
             </nav>
-          </aside>
+          </motion.aside>
 
           {/* Main Content */}
-          <div className="space-y-24">
-            <section id="overview">
+          <motion.div
+            className="space-y-20 lg:space-y-24 xl:space-y-28"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <motion.section
+              id="overview"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <AboutOverview />
-            </section>
+            </motion.section>
 
-            <section id="mission">
+            <motion.section
+              id="mission"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <MissionVision />
-            </section>
+            </motion.section>
 
-            <section id="value-chain">
+            <motion.section
+              id="value-chain"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <ValueChainApproach />
-            </section>
-          </div>
-
+            </motion.section>
+          </motion.div>
         </div>
       </section>
+
       <ContactStrip />
     </main>
   );

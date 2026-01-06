@@ -1,38 +1,201 @@
-// src/components/Hero.jsx
+// src/components/Hero.jsx - Premium Industry Standard Hero
+import React from 'react';
+import { motion } from "framer-motion";
 import heroImage from "../../assets/images/hero-field.png";
 
 const Hero = () => {
   return (
-    <section
-      className="relative flex items-center"
+    <motion.section
+      className="relative flex items-center min-h-[90vh] md:min-h-screen overflow-hidden"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "90vh",
+        backgroundAttachment: "fixed",
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      {/* Dark green overlay using brand variable */}
-      <div className="absolute inset-0 bg-brand-dark/70" />
+      {/* Multi-layer overlay */}
+      <motion.div 
+        className="absolute inset-0 bg-linear-to-br from-brand-dark/80 via-brand-primary/60 to-brand-dark/75 bg-blend-multiply" 
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5 }}
+      />
+      <motion.div 
+        className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" 
+        initial={{ scaleX: 1.05 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+      />
+      
+      {/* Subtle animated particles */}
+      <motion.div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+      >
+        <motion.div 
+          className="absolute top-1/4 left-10 w-32 h-32 bg-brand-white/10 rounded-full blur-xl" 
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute top-2/3 right-20 w-24 h-24 bg-brand-accent/20 rounded-full blur-lg" 
+          animate={{ y: [0, -16, 0] }}
+          transition={{ duration: 8, repeat: Infinity, delay: 2 }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-brand-white/5 rounded-full blur-2xl" 
+          animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+        />
+      </motion.div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl px-6 py-24">
-        <div className="max-w-xl">
-          {/* <h1 className="font-heading text-4xl leading-tight text-brand-white md:text-5xl lg:text-6xl">
-            Building Future-Ready Agri Value Chains
-          </h1> */}
-          <h1 className="font-heading text-4xl leading-tight text-brand-white md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Building Future -Ready 
-            <span className="block text-brand-accent mt-2">Agri Value Chains</span>
-          </h1>
+      <motion.div 
+        className="relative z-20 mx-auto flex w-full max-w-7xl px-6 py-20 md:py-28 lg:py-32"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <div className="w-full max-w-4xl text-center">
+          
+          {/* Hiring Badge */}
+          <motion.div 
+            className="inline-flex items-center justify-center gap-3 mb-8 md:mb-12 px-8 py-4 bg-brand-white/20 backdrop-blur-xl rounded-2xl border border-brand-white/40 text-brand-white text-sm md:text-base font-bold uppercase tracking-[0.3em]" 
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <motion.div 
+              className="w-3 h-3 bg-brand-accent rounded-full" 
+              animate={{ scale: [1, 1.4, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            />
+            Empowering Agriculture
+          </motion.div>
 
-          <p className="mt-6 text-base text-brand-white/90 md:text-lg">
-            Integrating research, agri-processing, and digital trade to
-            strengthen transparent, scalable, and sustainable agricultural
-            ecosystems.
-          </p>
+          {/* Hero Headline */}
+          <motion.h1 
+            className="font-heading text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-brand-white mb-8 md:mb-12 leading-tight tracking-tight drop-shadow-2xl md:drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)]" 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Building Future-Ready
+            <br className="hidden lg:block" />
+            <motion.span 
+              className="block lg:inline bg-linear-to-r from-brand-accent via-brand-white/90 to-brand-accent bg-clip-text text-transparent drop-shadow-3xl" 
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              Agri Value Chains
+            </motion.span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.div 
+            className="max-w-3xl mx-auto mb-12 md:mb-16 text-xl md:text-2xl lg:text-3xl text-brand-white/95 font-light leading-relaxed drop-shadow-lg" 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1 }}
+          >
+            Integrating <motion.strong 
+              className="text-brand-accent" 
+              whileHover={{ scale: 1.05 }}
+            >
+              research ↔ processing ↔ digital trade
+            </motion.strong> to create transparent, scalable, sustainable agricultural ecosystems.
+          </motion.div>
+
+          {/* Dual CTA Buttons */}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center" 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+          >
+            {/* Primary CTA */}
+            <motion.a 
+              href="/about"
+              className="group relative inline-flex items-center justify-center gap-3 bg-brand-white/20 backdrop-blur-xl 
+                         border-2 border-brand-white/30 hover:border-brand-white
+                         px-12 py-6 lg:px-16 lg:py-7 rounded-2xl text-xl lg:text-2xl font-bold uppercase 
+                         tracking-[0.2em] text-brand-white shadow-xl hover:shadow-2xl hover:shadow-brand-white/30 
+                         hover:scale-[1.05] hover:-translate-y-3 transition-all duration-700 
+                         focus:outline-none focus:ring-4 focus:ring-brand-white/50 active:scale-[0.98]" 
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              aria-label="Learn more about Negam Care"
+            >
+              <span className="relative z-10">Learn More</span>
+              <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+              <motion.span 
+                className="absolute inset-0 bg-linear-to-r from-brand-white/40 via-brand-white/60 to-transparent 
+                           -skew-x-12 -translate-x-[120%] group-hover:translate-x-[120%]
+                           transition-transform duration-1000 h-full w-1/3" 
+                aria-hidden="true" 
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+              />
+            </motion.a>
+
+            {/* Secondary CTA */}
+            <motion.a 
+              href="/contact"
+              className="inline-flex items-center justify-center gap-3 px-10 py-6 lg:px-12 lg:py-6 
+                         bg-transparent border-2 border-brand-white/50 backdrop-blur-xl 
+                         rounded-2xl text-lg lg:text-xl font-bold uppercase tracking-[0.15em]
+                         text-brand-white hover:bg-brand-white/20 hover:border-brand-white hover:shadow-xl 
+                         hover:-translate-y-1 transition-all duration-400" 
+              whileHover={{ scale: 1.02, y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              aria-label="Contact Negam Care team"
+            >
+              Get In Touch
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.27 7.27c.883.883 2.317.883 3.2 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </motion.a>
+          </motion.div>
+
+          {/* Scroll indicator */}
+          <motion.div 
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-80" 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 0.8 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
+          >
+            <div className="flex flex-col items-center gap-2">
+              <motion.div 
+                className="w-6 h-12 border-2 border-brand-white/60 rounded-full flex justify-center p-2" 
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <motion.div 
+                  className="w-1.5 h-3 bg-brand-white rounded-full" 
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </motion.div>
+              <motion.span 
+                className="text-xs uppercase tracking-wider text-brand-white/80 font-medium" 
+                animate={{ opacity: [1, 0.6, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                Scroll
+              </motion.span>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

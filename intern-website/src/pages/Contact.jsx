@@ -1,86 +1,124 @@
 // src/pages/Contact.jsx
-import React from "react";
-import ContactForm from "../components/ContactForm";
+import React, { lazy, Suspense } from "react";
+import { motion } from "framer-motion";
+
+// Lazy load components
+const PartnerHero = lazy(() => import("../components/PartnerSection/PartnerHero"));
+const PartnerTypes = lazy(() => import("../components/PartnerSection/PartnerTypes"));
+const PartnerValue = lazy(() => import("../components/PartnerSection/PartnerValue"));
+const PartnerContact = lazy(() => import("../components/PartnerSection/PartnerContact"));
 
 const Contact = () => {
   return (
-    <main className="bg-white">
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        {/* SECTION HEADING */}
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-heading text-sm uppercase tracking-[0.25rem] text-brand-primary">
-            Get In Touch
-          </p>
-          <h1 className="font-heading text-4xl md:text-5xl text-brand-dark">
-            Let&apos;s Start a Conversation
-          </h1>
-          <p className="mt-4 text-sm md:text-base text-brand-dark/70 max-w-2xl mx-auto">
-            Share your requirements with the Negam team and we&apos;ll respond within one business day.
-          </p>
-        </div>
+    <main className="bg-brand-white text-brand-dark overflow-x-hidden antialiased">
+      {/* Contact progress bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-50 h-1 shadow-sm bg-brand-primary/20"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div
+          className="h-full bg-linear-to-r from-brand-primary to-brand-accent shadow-lg origin-left"
+          style={{ scaleX: 0 }}
+        />
+      </motion.div>
 
-        {/* OUTER CONTAINER */}
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-brand-primary/10">
-          {/* FLEX LAYOUT */}
-          <div className="flex flex-col lg:flex-row">
-            {/* LEFT: Corporate Office + Map */}
-            <div className="w-full lg:w-95 bg-brand-dark px-8 md:px-10 py-10 md:py-12 text-white">
-              <h2 className="mb-6 font-heading text-2xl">
-                Corporate Office
-              </h2>
-
-              <div className="space-y-2 text-sm leading-relaxed text-white/85">
-                <p className="font-semibold text-white">
-                  Stemztech Industries Pvt. Ltd.
-                </p>
-                <p>Plot No. B-23A, B-24,</p>
-                <p>Block Ecotech Extension,</p>
-                <p>Sector Ecotech-1,</p>
-                <p>Greater Noida, G.B. Nagar – 201310,</p>
-                <p>Uttar Pradesh, India</p>
-              </div>
-
-              {/* MAP (responsive container) */}
-              <div className="mt-8 rounded-lg overflow-hidden border border-white/10 bg-black/10">
-                <div className="relative w-full pb-[56.25%]"> {/* 16:9 */}
-                  <iframe
-                    title="Corporate Office Location"
-                    src="https://www.google.com/maps?q=Greater%20Noida%20Ecotech%201&output=embed"
-                    className="absolute inset-0 h-full w-full border-0"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="mt-8 flex items-center gap-3 text-sm text-white/85">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
-                  ✉
-                </span>
-                <a
-                  href="mailto:info@stemztech.com"
-                  className="underline-offset-2 hover:underline hover:text-brand-accent transition-colors"
-                >
-                  info@stemztech.com
-                </a>
-              </div>
+      <Suspense fallback={
+        <motion.div 
+          className="min-h-screen flex items-center justify-center px-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <motion.div
+            className="text-center max-w-md space-y-4"
+            initial={{ y: 20, scale: 0.95 }}
+            animate={{ y: 0, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              className="w-20 h-20 mx-auto mb-6 border-4 border-brand-primary/20 
+                         border-t-brand-primary rounded-full shadow-lg"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+            />
+            <div className="text-2xl font-bold text-brand-primary mb-2">
+              Partner with Negam Care
             </div>
-
-            {/* RIGHT: Enquire Now */}
-            <div className="flex-1 px-6 md:px-10 py-10 md:py-12 bg-brand-accent/5">
-              <h2 className="mb-8 font-heading text-3xl text-brand-dark"
-              id="contact-strip"
-              >
-                Enquire Now
-              </h2>
-
-              {/* ContactForm already has branded focus states */}
-              <ContactForm className="rounded-2xl" />
+            <div className="text-sm text-brand-dark/70">
+              Building agri-partnerships...
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      }>
+        {/* Partner Hero */}
+        <motion.section
+          id="partner-hero"
+          className="scroll-mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <PartnerHero />
+        </motion.section>
+
+        {/* Partner Types */}
+        <motion.section
+          id="partner-types"
+          className="scroll-mt-20"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{ duration: 0.6 }}
+        >
+          <PartnerTypes />
+        </motion.section>
+
+        {/* Partner Value */}
+        <motion.section
+          id="partner-value"
+          className="scroll-mt-20"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-20%" }}
+          transition={{ duration: 0.6 }}
+        >
+          <PartnerValue />
+        </motion.section>
+
+        {/* Partner Contact */}
+        <motion.section
+          id="partner-contact"
+          className="scroll-mt-20"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <PartnerContact />
+        </motion.section>
+      </Suspense>
+
+      {/* Back to top */}
+      <motion.button
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full shadow-2xl md:hidden
+                   bg-brand-primary hover:bg-brand-accent
+                   border-2 border-brand-white/30 text-brand-white 
+                   backdrop-blur-xl active:scale-92 transition-all duration-300 
+                   flex items-center justify-center opacity-0 invisible"
+        animate={{ 
+          opacity: window.scrollY > 400 ? 1 : 0,
+          y: window.scrollY > 400 ? 0 : 20 
+        }}
+        transition={{ duration: 0.25 }}
+        onClick={() => document.getElementById("partner-hero")?.scrollIntoView({ behavior: "smooth" })}
+        aria-label="Back to top"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.92 }}
+      >
+        ↑
+      </motion.button>
     </main>
   );
 };
