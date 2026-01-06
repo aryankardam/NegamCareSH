@@ -17,6 +17,7 @@ const PartnerContact = () => {
           linear-gradient(135deg, rgba(var(--color-brand-primary-rgb), 0.03) 0%, transparent 70%)
         `,
       }}
+      id="contact-strip"
     >
       {/* Animated floating elements */}
       <motion.div
