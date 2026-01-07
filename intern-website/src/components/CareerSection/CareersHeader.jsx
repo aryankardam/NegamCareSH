@@ -1,5 +1,9 @@
 // CareersHeader.jsx - Content Header Section
 import React from 'react';
+import { GiMicroscope } from "react-icons/gi";
+import { HiDevicePhoneMobile } from "react-icons/hi2";
+import { PiPlantFill } from "react-icons/pi";
+import { FaHandshake } from "react-icons/fa";
 
 const CareersHeader = () => {
   return (
@@ -12,8 +16,8 @@ const CareersHeader = () => {
 
       <div className="relative z-10 mb-16 lg:mb-24 text-center">
         {/* Badge */}
-        <span className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r 
-                        from-brand-primary to-brand-accent
+        <span className="inline-flex items-center gap-3 px-8 py-4 
+                        bg-brand-dark
                         text-brand-white text-sm md:text-base font-semibold uppercase 
                         tracking-[0.25em] rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 
                         transition-all duration-300 cursor-pointer mb-8 mx-auto border border-white/20 group">
@@ -43,7 +47,7 @@ const CareersHeader = () => {
             digital supply chain solutions, and sustainable processing infrastructure.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-lg md:text-xl text-brand-dark/75">
+          {/* <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-lg md:text-xl text-brand-dark/75">
             <div>
               • High-tech agriculture R&D<br/>
               • Digital agri-trading<br/>
@@ -54,39 +58,40 @@ const CareersHeader = () => {
               • Institutional partnerships<br/>
               • Farmer ecosystem strengthening
             </div>
-          </div>
+          </div> */}
           
           <p className="text-lg md:text-xl font-semibold text-brand-primary italic pt-4 border-t border-brand-primary/20 max-w-2xl mx-auto">
-            📍 Gurgaon, Haryana - Building sustainable agri value chains
+             Gurgaon, Haryana - Building sustainable agri value chains
           </p>
         </div>
       </div>
 
       {/* Focus Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 max-w-5xl mx-auto">
-        {[
-          { icon: '🔬', title: 'R&D Innovation', desc: 'High-tech agriculture' },
-          { icon: '📱', title: 'Digital Trading', desc: 'Agri platforms' },
-          { icon: '🌱', title: 'Sustainable', desc: 'Processing infra' },
-          { icon: '🤝', title: 'Partnerships', desc: 'University links' }
-        ].map((item, idx) => (
-          <div key={idx} className="group p-8 rounded-3xl bg-white/80 backdrop-blur-xl 
-                                    border border-brand-primary/10 
-                                    hover:bg-white hover:shadow-2xl hover:border-brand-primary/30 
-                                    hover:-translate-y-4 transition-all duration-500 text-center cursor-default">
-            <div className="text-4xl lg:text-5xl mb-6 group-hover:scale-110 transition-transform mx-auto">
-              {item.icon}
-            </div>
-            <h3 className="font-bold text-xl lg:text-2xl text-brand-dark 
-                          mb-3 group-hover:text-brand-primary transition-colors">
-              {item.title}
-            </h3>
-            <p className="text-sm lg:text-base text-brand-dark/70 font-medium">
-              {item.desc}
-            </p>
-          </div>
-        ))}
+  {[
+    { icon: <GiMicroscope />, title: 'R&D Innovation', desc: 'High-tech agriculture' },
+    { icon: <HiDevicePhoneMobile />, title: 'Digital Trading', desc: 'Agri platforms' },
+    { icon: <PiPlantFill />, title: 'Sustainable', desc: 'Processing infra' },
+    { icon: <FaHandshake />, title: 'Partnerships', desc: 'University links' }
+  ].map((item, idx) => (
+    <div key={idx} className="group p-8 rounded-3xl bg-white/80 backdrop-blur-xl 
+                              border border-brand-primary/10 
+                              hover:bg-white hover:shadow-2xl hover:border-brand-primary/30 
+                              hover:-translate-y-4 transition-all duration-500 text-center cursor-default">
+      <div className="text-5xl lg:text-5xl mb-6 group-hover:scale-110 group-hover:text-brand-primary transition-all duration-300 flex justify-center items-center h-20 mx-auto">
+        {item.icon}
       </div>
+      <h3 className="font-bold text-xl lg:text-2xl text-brand-dark mb-3 
+                     group-hover:text-brand-primary transition-all duration-300">
+        {item.title}
+      </h3>
+      <p className="text-sm lg:text-base text-brand-dark/70 font-medium">
+        {item.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 };

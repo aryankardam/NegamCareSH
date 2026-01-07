@@ -113,7 +113,7 @@ const ValueChainApproach = () => {
                 {/* Step Number */}
                 <motion.div
                   className="absolute -left-8 top-6 w-6 h-6 lg:w-8 lg:h-8 flex items-center 
-                             justify-center rounded-full bg-brand-primary text-brand-white 
+                             justify-center rounded-full bg-brand-primary text-brand-dark 
                              font-bold text-xs lg:text-sm shadow-lg"
                   animate={{
                     scale: [1, 1.1, 1],

@@ -31,7 +31,7 @@ const WhyNegam = () => {
             {/* Eyebrow */}
             <motion.button
               className="inline-flex items-center gap-2.5 px-6 py-3 bg-linear-to-r 
-                         from-brand-primary to-brand-accent
+                         from-brand-dark to-brand-accent
                          text-brand-white text-xs md:text-sm font-semibold uppercase 
                          tracking-[0.22em] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 
                          transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/60

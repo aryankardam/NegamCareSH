@@ -91,7 +91,7 @@ const MissionVision = () => {
 
             {/* Icon */}
             <motion.div
-              className="absolute -top-5 left-6 w-10 h-10 md:w-12 md:h-12 flex items-center 
+              className="absolute -top-2 left-6 w-10 h-10 md:w-12 md:h-12 flex items-center 
                          justify-center rounded-2xl bg-brand-primary 
                          shadow-xl border-4 border-brand-white text-brand-white 
                          font-bold text-base md:text-lg"
@@ -148,7 +148,7 @@ const MissionVision = () => {
 
             {/* Icon */}
             <motion.div
-              className="absolute -top-5 right-6 w-10 h-10 md:w-12 md:h-12 flex items-center 
+              className="absolute -top-2 right-6 w-10 h-10 md:w-12 md:h-12 flex items-center 
                          justify-center rounded-2xl bg-brand-accent 
                          shadow-xl border-4 border-brand-white text-brand-white 
                          font-bold text-base md:text-lg"

@@ -1,4 +1,10 @@
-// src/components/PartnerSection/PartnerValue.jsx - Interactive Value Grid
+// src/components/PartnerSection/PartnerValue.jsx
+
+import { FaLink } from "react-icons/fa";
+import { GiChart } from "react-icons/gi";
+import { GiWorld } from "react-icons/gi";
+import { FaBalanceScale } from "react-icons/fa";
+
 const PartnerValue = () => {
   return (
     <section className="py-16 md:py-24 bg-linear-to-b from-gray-50/70 to-brand-white">
@@ -18,25 +24,25 @@ const PartnerValue = () => {
               number: '01',
               title: 'End-to-End Integration',
               desc: 'Research to market continuity with seamless execution',
-              icon: '🔗'
+              icon: <FaLink />
             },
             {
               number: '02',
               title: 'Digital Transparency',
               desc: 'Structured platforms for price discovery and traceability',
-              icon: '📊'
+              icon: <GiChart />
             },
             {
               number: '03',
               title: 'Nationwide Scale',
               desc: 'Logistics and sourcing networks across India',
-              icon: '🗺️'
+              icon: <GiWorld />
             },
             {
               number: '04',
               title: 'Policy Compliance',
               desc: 'Regulatory alignment for sustainable growth',
-              icon: '⚖️'
+              icon: <FaBalanceScale />
             }
           ].map(({ number, title, desc, icon }, idx) => (
             <div 
@@ -47,15 +53,14 @@ const PartnerValue = () => {
                         transition-all duration-500 h-full"
             >
               {/* Number badge */}
-              <div className="absolute -top-6 left-6 w-14 h-14 bg-linear-to-r 
-                             from-brand-primary to-brand-accent 
+              <div className="absolute -top-6 left-6 w-14 h-14          bg-brand-dark 
                              rounded-2xl flex items-center justify-center text-xl font-black 
-                             text-white shadow-2xl group-hover:scale-110 transition-all">
+                             text-white shadow-2xl group-hover:scale-110 group-hover:bg-brand-primary transition-all">
                 {number}
               </div>
               
               {/* Icon */}
-              <div className="text-4xl mb-6 mx-auto group-hover:scale-110 transition-all">
+              <div className="text-4xl  mb-6 mx-auto group-hover:scale-110 group-hover:text-brand-primary  transition-all">
                 <span role="img" aria-label={title}>{icon}</span>
               </div>
               

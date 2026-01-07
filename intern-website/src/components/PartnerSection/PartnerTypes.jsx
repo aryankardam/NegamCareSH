@@ -2,25 +2,28 @@
 import govImg from '../../assets/images/emandi.jpg'
 import researchImg from '../../assets/images/institutional.jpg'
 import marketImg from '../../assets/images/logistics.jpg'
+import { GiMicroscope } from "react-icons/gi";
+import { BiSolidBank } from "react-icons/bi";
+import { TbWorld } from "react-icons/tb";
 
 const PARTNER_TYPES = [
   {
     title: 'Government Bodies',
     desc: 'Collaborate on programmes focused on market integration, digital enablement, and value-chain efficiency aligned with agricultural policy objectives.',
     img: govImg,
-    icon: '🏛️'
+    icon: <BiSolidBank />
   },
   {
     title: 'Research Institutions',
     desc: 'Engage in applied research, pilot initiatives, and translational projects spanning seed systems, cultivation practices, and agri-processing innovation.',
     img: researchImg,
-    icon: '🔬'
+    icon: <GiMicroscope />
   },
   {
     title: 'Market & Ecosystem Partners',
     desc: 'Partner across sourcing, processing, logistics, and digital trade to support scalable and transparent agricultural operations.',
     img: marketImg,
-    icon: '🌐'
+    icon: <TbWorld />
   }
 ]
 
@@ -54,17 +57,17 @@ const PartnerTypes = () => (
                 className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
             
             {/* Content */}
             <div className="p-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-brand-accent rounded-2xl flex items-center justify-center 
-                               shadow-lg group-hover:scale-110 transition-all">
-                  <span className="text-2xl">{icon}</span>
+                <div className="w-12 h-12 bg-brand-dark rounded-2xl flex items-center justify-center 
+                               shadow-lg group-hover:scale-110 group-hover:bg-brand-primary transition-all">
+                  <span className="text-2xl text-brand-white">{icon}</span>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-bold text-brand-primary">
+                <span className="text-xs uppercase tracking-wider font-bold text-brand-dark/95 group-hover:text-brand-primary">
                   Partner Type
                 </span>
               </div>

@@ -1,6 +1,9 @@
 node_modules/
-.env
 uploads/
 .DS_Store
 *.log
+
+# Environment variables
 .env
+.env.*
+
