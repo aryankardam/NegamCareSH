@@ -81,65 +81,69 @@ const Hero = () => {
 
           {/* Hero Headline */}
           <motion.h1
-  className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-brand-white mb-8 md:mb-12 leading-tight tracking-tight drop-shadow-2xl md:drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] lg:whitespace-nowrap"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.6 }}
->
-  <span className="block lg:inline">
-    Building Future - Ready
-  </span>
-  <br className="hidden lg:block" />
-  <motion.span
-    className="block lg:inline bg-linear-to-r from-brand-accent via-brand-white/90 to-brand-accent bg-clip-text text-transparent drop-shadow-3xl"
-    initial={{ scale: 0.95 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 0.6, delay: 0.8 }}
-  >
-    Agri Value Chains
-  </motion.span>
-</motion.h1>
+            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-brand-white mb-8 md:mb-12 leading-tight tracking-tight drop-shadow-2xl md:drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] lg:whitespace-nowrap"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <span className="block lg:inline">Building Future - Ready</span>
+            <br className="hidden lg:block" />
+            <motion.span
+              className="block lg:inline bg-linear-to-r from-brand-accent via-brand-white/90 to-brand-accent bg-clip-text text-transparent drop-shadow-3xl"
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              Agri Value Chains
+            </motion.span>
+          </motion.h1>
 
-
-          {/* Subtitle */}
+          {/* Subtitle - FIXED ALIGNMENT */}
           <motion.div
-            className="max-w-3xl mx-auto mb-12 md:mb-16 text-xl md:text-2xl lg:text-3xl text-brand-white/95 font-light leading-relaxed drop-shadow-lg"
+            className="max-w-3xl mb-12 md:mb-16 text-xl md:text-2xl lg:text-3xl text-brand-white/95 font-light leading-[1.3] tracking-wide drop-shadow-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1 }}
           >
             Integrating{" "}
             <motion.strong
-              className="text-brand-accent font-semibold"
+              className="text-brand-accent font-semibold inline-block"
               whileHover={{ scale: 1.05 }}
             >
               research ↔ processing ↔ digital trade
             </motion.strong>{" "}
-            to create transparent, scalable and sustainable agricultural ecosystems.
+            to create transparent, scalable and sustainable agricultural
+            ecosystems.
           </motion.div>
 
-          {/* Dual CTA Buttons */}
+          {/* Dual CTA Buttons — FIXED & FUNCTIONAL */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            initial={{ opacity: 0, y: 40 }}
+            className="flex flex-col sm:flex-row gap-4 justify-start"
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             {/* Primary CTA */}
-            <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.98 }}>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
               <Link
                 to="/about"
-                className="group relative inline-flex items-center justify-center gap-3 bg-brand-white/20 backdrop-blur-xl 
-                           border-2 border-brand-white/30 hover:border-brand-white
-                           px-12 py-6 lg:px-16 lg:py-7 rounded-2xl text-xl lg:text-2xl font-bold uppercase 
-                           tracking-[0.2em] text-brand-white shadow-xl hover:shadow-2xl hover:shadow-brand-white/30 
-                           hover:scale-[1.05] hover:-translate-y-3 transition-all duration-700 
-                           focus:outline-none focus:ring-4 focus:ring-brand-white/50 active:scale-[0.98]"
+                className="
+        group inline-flex items-center justify-center gap-3
+        px-8 py-4 min-w-[220px]
+        rounded-xl
+        bg-brand-white
+        text-brand-dark
+        text-base md:text-lg
+        font-semibold uppercase tracking-wide
+        shadow-lg hover:shadow-xl
+        focus:outline-none focus:ring-4 focus:ring-brand-white/40
+        transition-all duration-300
+      "
                 aria-label="Learn more about Negam Care"
               >
-                <span className="relative z-10">Learn More</span>
+                <span>Learn More</span>
                 <svg
-                  className="w-6 h-6 group-hover:translate-x-2 transition-transform"
+                  className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -151,31 +155,32 @@ const Hero = () => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-                <motion.span
-                  className="absolute inset-0 bg-linear-to-r from-brand-white/40 via-brand-white/60 to-transparent 
-                             -skew-x-12 -translate-x-[120%] group-hover:translate-x-[120%]
-                             transition-transform duration-1000 h-full w-1/3"
-                  aria-hidden="true"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                />
               </Link>
             </motion.div>
 
             {/* Secondary CTA */}
-            <motion.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }}>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-3 px-10 py-6 lg:px-12 lg:py-6 
-                           bg-transparent border-2 border-brand-white/50 backdrop-blur-xl 
-                           rounded-2xl text-lg lg:text-xl font-bold uppercase tracking-[0.15em]
-                           text-brand-white hover:bg-brand-white/20 hover:border-brand-white hover:shadow-xl 
-                           hover:-translate-y-1 transition-all duration-400"
+                className="
+                  group inline-flex items-center justify-center gap-3
+                  px-8 py-4 min-w-55
+                  rounded-xl
+                  border-2 border-brand-white/70
+                  text-brand-white
+                  bg-transparent
+                  text-base md:text-lg
+                  font-semibold uppercase tracking-wide
+                  hover:bg-brand-white/10
+                  shadow-md hover:shadow-lg
+                  focus:outline-none focus:ring-4 focus:ring-brand-white/30
+                  transition-all duration-300
+                "
                 aria-label="Contact Negam Care team"
               >
-                Get In Touch
+                <span>Get in Touch</span>
                 <svg
-                  className="w-5 h-5"
+                  className="h-5 w-5 opacity-80 transition-transform duration-300 group-hover:translate-x-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -184,7 +189,7 @@ const Hero = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 8l7.27 7.27c.883.883 2.317.883 3.2 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    d="M3 8l7.27 7.27c.883.883 2.317.883 3.2 0L21 8"
                   />
                 </svg>
               </Link>
@@ -207,7 +212,11 @@ const Hero = () => {
                 <motion.div
                   className="w-1.5 h-3 bg-brand-white rounded-full"
                   animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
               </motion.div>
               <motion.span
