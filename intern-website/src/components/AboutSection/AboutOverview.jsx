@@ -72,8 +72,8 @@ const AboutOverview = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Negam Care is a purpose-driven agri-technology enterprise focused on
-              integrating research, processing, and digital trade to improve
+              Negam Care is a purpose-driven agri-technology enterprise focused
+              on integrating research, processing, and digital trade to improve
               agricultural outcomes.
             </motion.p>
 
@@ -87,12 +87,13 @@ const AboutOverview = () => {
             >
               The company works across cultivation, value addition, and market
               enablement to support transparent, efficient, and scalable
-              agri-value chains aligned with institutional and policy frameworks.
+              agri-value chains aligned with institutional and policy
+              frameworks.
             </motion.p>
           </motion.div>
 
           {/* Key Metrics */}
-          <motion.div
+          {/* <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-10"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -142,7 +143,7 @@ const AboutOverview = () => {
                 Network Coverage
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Image Column */}
@@ -154,16 +155,18 @@ const AboutOverview = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="relative overflow-hidden rounded-3xl shadow-2xl 
+          <div
+            className="relative overflow-hidden rounded-3xl shadow-2xl 
                           ring-4 ring-brand-white/50 group-hover:ring-brand-primary/20 
-                          bg-linear-to-br from-brand-white/70 backdrop-blur-xl">
+                          bg-linear-to-br from-brand-white/70 backdrop-blur-xl"
+          >
             <motion.img
               src={overviewImage}
               alt="Negam Care comprehensive agricultural ecosystem: research facilities, processing infrastructure, digital trading platforms, and nationwide logistics operations"
               className="w-full h-80 md:h-95 lg:h-110 object-cover transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
             />
-            
+
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-brand-dark/15 via-transparent to-transparent" />
           </div>

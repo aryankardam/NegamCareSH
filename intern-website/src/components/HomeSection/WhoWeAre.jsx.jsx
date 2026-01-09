@@ -42,7 +42,7 @@ const WhoWeAre = () => {
               {/* Content Cards */}
               <div className="space-y-6 mb-10 md:mb-12">
                 <div className="group p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 hover:bg-white/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-accent">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-dark/60">
                     Agri-Tech Intersection
                   </h3>
                   <p className="text-base md:text-lg text-white/95 leading-relaxed">
@@ -52,7 +52,7 @@ const WhoWeAre = () => {
                 </div>
 
                 <div className="group p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 hover:bg-white/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-accent">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-dark/60">
                     Innovation to Impact
                   </h3>
                   <p className="text-base md:text-lg text-white/95 leading-relaxed">

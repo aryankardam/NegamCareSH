@@ -60,9 +60,7 @@ const CareersHeader = () => {
             </div>
           </div> */}
           
-          <p className="text-lg md:text-xl font-semibold text-brand-primary italic pt-4 border-t border-brand-primary/20 max-w-2xl mx-auto">
-             Gurgaon, Haryana - Building sustainable agri value chains
-          </p>
+          
         </div>
       </div>
 

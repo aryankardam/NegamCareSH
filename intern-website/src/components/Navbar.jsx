@@ -18,7 +18,12 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const active = navItems.find((item) => item.path === location.pathname)?.label || "Home";
+  const active =
+    navItems.find((item) => item.path === location.pathname)?.label || "Home";
+
+  // NEW: derive CTA label from current route (careers => Join Us)
+  const isCareersRoute = location.pathname === "/careers";
+  const ctaLabel = isCareersRoute ? "Join Us" : "Enquire Now";
 
   /* -------------------------------
     Scroll helpers
@@ -27,7 +32,6 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // scroll to #contact-strip on the current route by default
   const scrollToContactStrip = (targetPath) => {
     const path = targetPath || location.pathname;
 
@@ -102,7 +106,6 @@ const Navbar = () => {
             aria-label="Toggle navigation"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
-            {/* animated hamburger / close icon */}
             <div className="relative h-4 w-5">
               <span
                 className={`absolute top-0 h-0.5 w-5 bg-current transition-all ${
@@ -172,13 +175,13 @@ const Navbar = () => {
             </nav>
           </div>
 
-          {/* CTA BUTTON (desktop) – uses current page by default */}
+          {/* CTA BUTTON (desktop) – dynamic label */}
           <Button
             as="button"
             type="button"
             onClick={() => scrollToContactStrip()}
           >
-            <span className="relative z-10">Enquire Now</span>
+            <span className="relative z-10">{ctaLabel}</span>
           </Button>
         </div>
 
@@ -193,12 +196,12 @@ const Navbar = () => {
               text-white bg-brand-primary shadow-md
             "
           >
-            Enquire Now
+            {ctaLabel}
           </button>
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN PANEL (improved behavior) */}
+      {/* MOBILE DROPDOWN PANEL */}
       <div
         className={`
           md:hidden border-t border-gray-200 bg-white
@@ -233,7 +236,7 @@ const Navbar = () => {
             );
           })}
 
-          {/* CTA inside mobile panel – also uses current page */}
+          {/* CTA inside mobile panel – dynamic label too */}
           <Button
             as="button"
             type="button"
@@ -242,7 +245,7 @@ const Navbar = () => {
               setMobileOpen(false);
             }}
           >
-            <span className="relative z-10">Enquire Now</span>
+            <span className="relative z-10">{ctaLabel}</span>
           </Button>
         </nav>
       </div>

@@ -8,7 +8,7 @@ const PartnerContact = () => {
   };
 
   return (
-    <section 
+    <section
       className="relative min-h-150 overflow-hidden bg-linear-to-br from-emerald-50 via-green-50 to-emerald-100"
       style={{
         backgroundImage: `
@@ -59,7 +59,11 @@ const PartnerContact = () => {
                        bg-linear-to-r from-brand-dark/90 via-brand-primary to-brand-accent/90 
                        bg-clip-text drop-shadow-sm"
             whileInView={{ scale: [1, 1.02, 1] }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
           >
             Let's Start a Partnership Conversation
           </motion.h1>
@@ -70,7 +74,9 @@ const PartnerContact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Ready to explore how Negam Care can support structured, transparent, and scalable agri-value chains? Connect with us to discuss partnerships, projects, and collaboration opportunities.
+            Ready to explore how Negam Care can support structured, transparent,
+            and scalable agri-value chains? Connect with us to discuss
+            partnerships, projects, and collaboration opportunities.
           </motion.p>
         </motion.div>
 
@@ -81,7 +87,10 @@ const PartnerContact = () => {
                      transition-all duration-500"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -4, boxShadow: "0 35px 80px -20px rgba(16,185,129,0.15)" }}
+          whileHover={{
+            y: -4,
+            boxShadow: "0 35px 80px -20px rgba(16,185,129,0.15)",
+          }}
           transition={{ type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
         >
@@ -98,7 +107,7 @@ const PartnerContact = () => {
               viewport={{ once: true }}
             >
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iOCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xNSIvPgo8L3N2Zz4K')] opacity-20" />
-              
+
               <motion.h2
                 className="mb-5 md:mb-6 font-heading text-xl md:text-2xl relative z-10"
                 whileInView={{ y: [0, -4, 0] }}
@@ -111,11 +120,11 @@ const PartnerContact = () => {
                 <p className="font-semibold text-white text-sm md:text-base">
                   Negam Care Pvt. Ltd.
                 </p>
-                <p>Plot No. B-23A, B-24,</p>
-                <p>Block Ecotech Extension,</p>
-                <p>Sector Ecotech-1,</p>
-                <p>Greater Noida, G.B. Nagar – 201310,</p>
-                <p className="text-xs">Uttar Pradesh, India</p>
+                <p>Plot No. E-259,</p>
+                <p>Helipad Road,</p>
+                <p>Namsai Circle,</p>
+                <p>P.O. & P.S. Namsai – 792103,</p>
+                <p className="text-xs">Arunachal Pradesh, India</p>
               </div>
 
               {/* MAP */}
@@ -127,30 +136,32 @@ const PartnerContact = () => {
               >
                 <div className="relative w-full pb-[60%]">
                   <iframe
-                    title="Negam Care Corporate Office - Greater Noida"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.390057!2d77.499999!3d28.499999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzU5LjkiTiA3N8KwMjknNTkuOVIiMg!5e0!3m2!1sen!2sin!4v1234567890"
+                    title="Negam Care Office – Namsai, Arunachal Pradesh"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.4735946007117!2d95.8559229!3d27.6717538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x373efbacc9e7d15b%3A0x10cddc5f41e8748!2sHelipad%20Rd%2C%20Namsai%2C%20Arunachal%20Pradesh!5e0!3m2!1sen!2sin!4v1767883048170!5m2!1sen!2sin"
                     className="absolute inset-0 h-full w-full border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    allowFullScreen=""
+                    allowFullScreen
                   />
                 </div>
               </motion.div>
 
               {/* Email */}
               <motion.a
-                href="mailto:info@stemztech.com"
+                href="mailto:info@negamcare.com"
                 className="mt-6 md:mt-8 flex items-center gap-2.5 text-sm text-white/95 
                            hover:text-white hover:bg-white/15 px-4 py-2.5 rounded-xl 
                            backdrop-blur-sm border border-white/15 transition-all duration-300 relative z-10"
                 whileHover={{ scale: 1.03, x: 4 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center 
-                                rounded-lg bg-white/20 shrink-0 font-medium text-xs">
+                <span
+                  className="inline-flex h-9 w-9 items-center justify-center 
+                                rounded-lg bg-white/20 shrink-0 font-medium text-xs"
+                >
                   ✉
                 </span>
-                info@stemztech.com
+                info@negamcare.com
               </motion.a>
             </motion.div>
 
@@ -169,7 +180,11 @@ const PartnerContact = () => {
                            to-brand-primary/60 bg-clip-text relative z-10"
                 id="partner-enquiry"
                 whileInView={{ scale: [1, 1.03, 1] }}
-                transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
               >
                 Enquire Now
               </motion.h2>
@@ -182,7 +197,11 @@ const PartnerContact = () => {
                     "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(var(--color-brand-primary-rgb), 0.06) 100%)",
                   ],
                 }}
-                transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
               >
                 <ContactForm onSubmit={handleSubmit} />
               </motion.div>

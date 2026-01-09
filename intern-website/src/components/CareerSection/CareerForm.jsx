@@ -2,6 +2,8 @@
 import React, { useState, useCallback, useRef } from "react";
 
 const CareerForm = () => {
+  
+
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", position: "", message: ""
   });
@@ -66,7 +68,10 @@ const CareerForm = () => {
   const inputBase = "w-full rounded-xl border px-5 py-4 text-base border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm focus-visible:border-brand-primary focus-visible:ring-4 focus-visible:ring-brand-primary/20 transition-all";
 
   return (
-    <div className="space-y-8">
+    <div 
+      className="space-y-8"
+      id="contact-strip"
+    >
       {submitStatus === "success" && (
         <div className="p-6 bg-green-50 border border-green-200 rounded-2xl text-center">
           <div className="text-2xl mb-3">✅</div>
@@ -75,7 +80,7 @@ const CareerForm = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-8" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-8"  noValidate>
         <div>
           <label className="block text-lg font-semibold text-brand-dark mb-3">
             Full Name <span className="text-red-500">*</span>

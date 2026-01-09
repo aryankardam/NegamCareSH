@@ -41,7 +41,7 @@ const PartnerCTA = () => {
             {/* Content */}
             <div className="space-y-6 mb-12">
               <div className="group p-6 bg-white/15 backdrop-blur-xl rounded-2xl border border-white/20 hover:bg-white/25 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-accent">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-dark/60">
                   Research Integration
                 </h3>
                 <p className="text-lg md:text-xl text-white/95 leading-relaxed">
@@ -50,7 +50,7 @@ const PartnerCTA = () => {
               </div>
 
               <div className="group p-6 bg-white/15 backdrop-blur-xl rounded-2xl border border-white/20 hover:bg-white/25 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-accent">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-dark/60">
                   Market Solutions
                 </h3>
                 <p className="text-lg md:text-xl text-white/95 leading-relaxed">

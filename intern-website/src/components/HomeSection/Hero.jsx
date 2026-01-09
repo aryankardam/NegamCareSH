@@ -81,22 +81,25 @@ const Hero = () => {
 
           {/* Hero Headline */}
           <motion.h1
-            className="font-heading text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-brand-white mb-8 md:mb-12 leading-tight tracking-tight drop-shadow-2xl md:drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)]"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Building Future-Ready
-            <br className="hidden lg:block" />
-            <motion.span
-              className="block lg:inline bg-linear-to-r from-brand-accent via-brand-white/90 to-brand-accent bg-clip-text text-transparent drop-shadow-3xl"
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              Agri Value Chains
-            </motion.span>
-          </motion.h1>
+  className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-brand-white mb-8 md:mb-12 leading-tight tracking-tight drop-shadow-2xl md:drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] lg:whitespace-nowrap"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+>
+  <span className="block lg:inline">
+    Building Future - Ready
+  </span>
+  <br className="hidden lg:block" />
+  <motion.span
+    className="block lg:inline bg-linear-to-r from-brand-accent via-brand-white/90 to-brand-accent bg-clip-text text-transparent drop-shadow-3xl"
+    initial={{ scale: 0.95 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 0.6, delay: 0.8 }}
+  >
+    Agri Value Chains
+  </motion.span>
+</motion.h1>
+
 
           {/* Subtitle */}
           <motion.div
@@ -107,12 +110,12 @@ const Hero = () => {
           >
             Integrating{" "}
             <motion.strong
-              className="text-brand-accent"
+              className="text-brand-accent font-semibold"
               whileHover={{ scale: 1.05 }}
             >
               research ↔ processing ↔ digital trade
             </motion.strong>{" "}
-            to create transparent, scalable, sustainable agricultural ecosystems.
+            to create transparent, scalable and sustainable agricultural ecosystems.
           </motion.div>
 
           {/* Dual CTA Buttons */}

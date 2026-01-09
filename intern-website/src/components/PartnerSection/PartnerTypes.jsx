@@ -67,15 +67,19 @@ const PartnerTypes = () => (
                                shadow-lg group-hover:scale-110 group-hover:bg-brand-primary transition-all">
                   <span className="text-2xl text-brand-white">{icon}</span>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-bold text-brand-dark/95 group-hover:text-brand-primary">
+                {/* <span className="text-xs uppercase tracking-wider font-bold text-brand-dark/95 group-hover:text-brand-primary">
                   Partner Type
-                </span>
-              </div>
-              
-              <h3 className="font-heading text-lg md:text-xl lg:text-2xl text-brand-dark 
-                            font-bold mb-4 group-hover:text-brand-primary transition-colors">
+                </span> */}
+                <h3 className="font-heading text-lg md:text-xl lg:text-2xl text-brand-dark 
+                            font-bold  group-hover:text-brand-primary transition-colors">
                 {title}
               </h3>
+              </div>
+              
+              {/* <h3 className="font-heading text-lg md:text-xl lg:text-2xl text-brand-dark 
+                            font-bold mb-4 group-hover:text-brand-primary transition-colors">
+                {title}
+              </h3> */}
 
               <p className="text-base md:text-lg text-brand-dark/80 leading-relaxed 
                         group-hover:text-brand-dark/95 transition-colors">

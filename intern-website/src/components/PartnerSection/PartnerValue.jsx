@@ -44,36 +44,44 @@ const PartnerValue = () => {
               desc: 'Regulatory alignment for sustainable growth',
               icon: <FaBalanceScale />
             }
-          ].map(({ number, title, desc, icon }, idx) => (
+          ].map(({ title, desc, icon }, idx) => (
             <div 
-              key={idx}
-              className="group relative p-8 rounded-3xl border border-brand-dark/10 
-                        bg-white shadow-sm hover:shadow-2xl hover:shadow-brand-accent/25 
-                        hover:-translate-y-2 hover:border-brand-primary/30 
-                        transition-all duration-500 h-full"
-            >
-              {/* Number badge */}
-              <div className="absolute -top-6 left-6 w-14 h-14          bg-brand-dark 
-                             rounded-2xl flex items-center justify-center text-xl font-black 
-                             text-white shadow-2xl group-hover:scale-110 group-hover:bg-brand-primary transition-all">
-                {number}
-              </div>
-              
-              {/* Icon */}
-              <div className="text-4xl  mb-6 mx-auto group-hover:scale-110 group-hover:text-brand-primary  transition-all">
-                <span role="img" aria-label={title}>{icon}</span>
-              </div>
-              
-              <h3 className="font-heading text-lg md:text-xl text-brand-dark 
-                            font-bold mb-4 text-center group-hover:text-brand-primary transition-colors">
-                {title}
-              </h3>
-              
-              <p className="text-sm md:text-base text-brand-dark/80
-                          text-center leading-relaxed group-hover:text-brand-dark/95 transition-colors">
-                {desc}
-              </p>
-            </div>
+  key={idx}
+  className="group relative p-8 rounded-3xl border border-brand-dark/10 
+             bg-white shadow-sm hover:shadow-2xl hover:shadow-brand-accent/25 
+             hover:-translate-y-2 hover:border-brand-primary/30 
+             transition-all duration-500 h-full text-center"
+>
+  {/* Icon wrapper */}
+  <div
+    className="mx-auto mb-6 flex h-16 w-16 items-center justify-center 
+               rounded-2xl bg-brand-accent/10 text-3xl
+               transition-all duration-300
+               group-hover:scale-110 group-hover:bg-brand-accent/20
+               group-hover:text-brand-primary"
+  >
+    <span role="img" aria-label={title}>
+      {icon}
+    </span>
+  </div>
+
+  <h3
+    className="font-heading text-lg md:text-xl text-brand-dark 
+               font-bold mb-4 transition-colors
+               group-hover:text-brand-primary"
+  >
+    {title}
+  </h3>
+
+  <p
+    className="text-sm md:text-base text-brand-dark/80
+               leading-relaxed transition-colors
+               group-hover:text-brand-dark/95"
+  >
+    {desc}
+  </p>
+</div>
+
           ))}
         </div>
       </div>

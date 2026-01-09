@@ -96,7 +96,7 @@ const Footer = () => {
                 onClick={() => handleNavClick("/careers")}
                 className="text-left group hover:text-brand-accent transition-colors duration-200 after:inline-block after:w-2 after:h-2 after:bg-brand-accent/60 after:rounded-full after:ml-2 after:opacity-0 group-hover:after:opacity-100 after:transition-all"
               >
-                Career
+                Careers
               </button>
               <button
                 type="button"

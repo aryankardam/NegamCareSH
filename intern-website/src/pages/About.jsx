@@ -67,7 +67,7 @@ const About = () => {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,260px)_1fr] xl:grid-cols-[minmax(0,280px)_1fr] gap-8 lg:gap-12 xl:gap-16">
-          {/* Animated Sidebar */}
+          {/* Animated Sidebar - TILE STYLE */}
           <motion.aside
             className="hidden lg:flex lg:flex-col sticky top-24 md:top-28 self-start pt-8"
             initial={{ opacity: 0, x: -20 }}
@@ -75,53 +75,57 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <nav className="space-y-5 lg:space-y-6">
-              {SECTIONS.map(({ id, label }, index) => {
+            <nav className="space-y-3">
+              {SECTIONS.map(({ id, label }) => {
                 const isActive = activeSection === id;
+
                 return (
-                  <motion.button
+                  <button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="group flex items-start gap-3 w-full text-left p-3 rounded-xl 
-                               hover:bg-brand-primary/5 focus:outline-none focus:ring-2 
-                               focus:ring-brand-primary/30 focus:ring-offset-2 transition-all duration-300"
-                    whileHover={{ 
-                      scale: 1.02, 
-                      backgroundColor: "rgba(var(--color-brand-primary-rgb), 0.08)" 
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className={`
+          group relative w-full text-left rounded-xl px-4 py-4
+          transition-all duration-200
+          ${
+            isActive
+              ? "bg-brand-dark text-white"
+              : `
+                bg-white
+                border border-brand-dark/15
+                hover:border-brand-primary/40
+                hover:bg-brand-dark/5
+              `
+          }
+        `}
                   >
-                    {/* Active Indicator */}
-                    <motion.span
-                      className="mt-2 h-6 w-1.5 rounded-full bg-brand-primary/30 
-                                 group-hover:bg-brand-primary/60 shrink-0"
-                      animate={{
-                        height: isActive ? "2.5rem" : "1.5rem",
-                        backgroundColor: isActive 
-                          ? "rgb(var(--color-brand-primary-rgb))" 
-                          : "rgb(var(--color-brand-primary-rgb) / 0.4)",
-                      }}
-                      transition={{ duration: 0.3 }}
+                    {/* LEFT ACTIVE BAR */}
+                    <span
+                      className={`
+            absolute left-0 top-0 h-full w-1 rounded-r
+            transition-opacity duration-300
+            ${
+              isActive
+                ? "bg-brand-primary opacity-100"
+                : "opacity-0 group-hover:opacity-40 bg-brand-primary"
+            }
+          `}
                     />
 
-                    {/* Label */}
-                    <motion.span
-                      className="text-sm md:text-base font-medium leading-tight 
-                                 text-brand-dark/75 group-hover:text-brand-dark"
-                      animate={{
-                        color: isActive 
-                          ? "rgb(var(--color-brand-primary-rgb))" 
-                          : "rgb(0 0 0 / 0.75)",
-                        fontWeight: isActive ? 700 : 500,
-                      }}
-                      transition={{ duration: 0.3 }}
+                    {/* LABEL */}
+                    <span
+                      className={`
+            block pl-3 text-sm lg:text-base font-medium tracking-wide
+            transition-colors duration-200
+            ${
+              isActive
+                ? "text-white font-semibold"
+                : "text-brand-dark/80"
+            }
+          `}
                     >
                       {label}
-                    </motion.span>
-                  </motion.button>
+                    </span>
+                  </button>
                 );
               })}
             </nav>
