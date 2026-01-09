@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "AvantGarde";
-  src: url("/src/assets/fonts/ITC-Avant-Garde/ITC\ Avant\ Garde\ Gothic\ CE\ Book.otf") format("opentype");
+  src: url("/src/assets/fonts/ITC-Avant-Garde/ITC Avant Garde Gothic CE Book.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
