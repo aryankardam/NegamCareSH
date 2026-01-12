@@ -24,12 +24,6 @@ const TradingSection = () => {
 
         {/* Text right */}
         <div className="order-1 lg:order-2">
-          {/* <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
-                           bg-brand-primary/10 text-xs font-semibold 
-                           tracking-wide uppercase text-brand-primary mb-4">
-            Service 02
-          </span> */}
-
           <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl 
                         text-brand-dark font-bold mb-4">
             Digital Commodity Trading (E‑mandi)

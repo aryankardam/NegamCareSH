@@ -59,11 +59,6 @@ const PartnerContact = () => {
                        bg-linear-to-r from-brand-dark/90 via-brand-primary to-brand-accent/90 
                        bg-clip-text drop-shadow-sm"
             whileInView={{ scale: [1, 1.02, 1] }}
-            // transition={{
-            //   duration: 2,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
           >
             Let's Start a Partnership Conversation
           </motion.h1>
@@ -180,11 +175,6 @@ const PartnerContact = () => {
                            to-brand-primary/60 bg-clip-text relative z-10"
                 id="partner-enquiry"
                 whileInView={{ scale: [1, 1.03, 1] }}
-                // transition={{
-                //   duration: 1,
-                //   repeat: Infinity,
-                //   repeatType: "reverse",
-                // }}
               >
                 Enquire Now
               </motion.h2>

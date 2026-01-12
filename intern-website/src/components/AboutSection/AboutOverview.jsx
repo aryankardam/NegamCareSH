@@ -91,59 +91,6 @@ const AboutOverview = () => {
               frameworks.
             </motion.p>
           </motion.div>
-
-          {/* Key Metrics */}
-          {/* <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-10"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="group p-6 md:p-8 rounded-2xl bg-linear-to-br from-brand-primary/5 
-                         to-brand-accent/5 border border-brand-primary/20 
-                         hover:shadow-xl hover:shadow-(--color-brand-primary)/20 
-                         hover:-translate-y-2 hover:border-brand-primary/40 
-                         transition-all duration-500 cursor-default"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <motion.div
-                className="text-3xl md:text-4xl font-bold 
-                           bg-linear-to-r from-brand-primary to-brand-accent
-                           bg-clip-text text-transparent mb-2"
-                whileHover={{ scale: 1.1 }}
-              >
-                4+
-              </motion.div>
-              <div className="text-sm md:text-base text-brand-dark/80 font-medium">
-                Core Services
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="group p-6 md:p-8 rounded-2xl bg-linear-to-br from-brand-accent/5 
-                         to-brand-primary/5 border border-brand-accent/20 
-                         hover:shadow-xl hover:shadow-(--color-brand-accent)/20 
-                         hover:-translate-y-2 hover:border-brand-accent/40 
-                         transition-all duration-500 cursor-default"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <motion.div
-                className="text-3xl md:text-4xl font-bold 
-                           bg-linear-to-r from-brand-accent to-brand-primary
-                           bg-clip-text text-transparent mb-2"
-                whileHover={{ scale: 1.1 }}
-              >
-                India-wide
-              </motion.div>
-              <div className="text-sm md:text-base text-brand-dark/80 font-medium">
-                Network Coverage
-              </div>
-            </motion.div>
-          </motion.div> */}
         </motion.div>
 
         {/* Image Column */}

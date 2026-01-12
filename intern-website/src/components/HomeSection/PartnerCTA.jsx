@@ -1,4 +1,4 @@
-// src/components/HomeSection/PartnerCTA.jsx - Enhanced Industry Standard
+// src/components/HomeSection/PartnerCTA.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import partnerImage from "../../assets/images/close-up-picture-hand-passing-sapling-plant-another-hand.jpg";

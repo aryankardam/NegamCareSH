@@ -1,4 +1,4 @@
-// src/components/AboutSection/ValueChainApproach.jsx - FIXED
+// src/components/AboutSection/ValueChainApproach.jsx
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // ← ADD THIS IMPORT
 import valueChainImage from "../../assets/images/vegetable-fresh-greenhouse-with-infographics-smart-farming-precision-agriculture-40-with-visual-icon-digital-technology-agriculture-smart-farming-concept.jpg";

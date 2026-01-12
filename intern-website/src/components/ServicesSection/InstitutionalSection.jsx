@@ -7,12 +7,6 @@ const InstitutionalSection = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
         {/* Text*/}
         <div>
-          {/* <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
-                           bg-brand-primary/10 text-xs font-semibold 
-                           tracking-wide uppercase text-brand-primary mb-4">
-            Service 04
-          </span> */}
-
           <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl 
                         text-brand-dark font-bold mb-4">
             Institutional & Market Enablement

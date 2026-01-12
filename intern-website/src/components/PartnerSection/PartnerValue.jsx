@@ -14,79 +14,79 @@ const PartnerValue = () => {
             Why Partner With Negam Care
           </h2>
           <p className="mx-auto max-w-4xl text-lg md:text-xl text-brand-dark/70 leading-relaxed">
-            Single operating framework combining research insights, processing infrastructure, and digital trade systems.
+            Single operating framework combining research insights, processing
+            infrastructure, and digital trade systems.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
           {[
             {
-              number: '01',
-              title: 'End-to-End Integration',
-              desc: 'Research to market continuity with seamless execution',
-              icon: <FaLink />
+              number: "01",
+              title: "End-to-End Integration",
+              desc: "Research to market continuity with seamless execution",
+              icon: <FaLink />,
             },
             {
-              number: '02',
-              title: 'Digital Transparency',
-              desc: 'Structured platforms for price discovery and traceability',
-              icon: <GiChart />
+              number: "02",
+              title: "Digital Transparency",
+              desc: "Structured platforms for price discovery and traceability",
+              icon: <GiChart />,
             },
             {
-              number: '03',
-              title: 'Nationwide Scale',
-              desc: 'Logistics and sourcing networks across India',
-              icon: <GiWorld />
+              number: "03",
+              title: "Nationwide Scale",
+              desc: "Logistics and sourcing networks across India",
+              icon: <GiWorld />,
             },
             {
-              number: '04',
-              title: 'Policy Compliance',
-              desc: 'Regulatory alignment for sustainable growth',
-              icon: <FaBalanceScale />
-            }
+              number: "04",
+              title: "Policy Compliance",
+              desc: "Regulatory alignment for sustainable growth",
+              icon: <FaBalanceScale />,
+            },
           ].map(({ title, desc, icon }, idx) => (
-            <div 
-  key={idx}
-  className="group relative p-8 rounded-3xl border border-brand-dark/10 
+            <div
+              key={idx}
+              className="group relative p-8 rounded-3xl border border-brand-dark/10 
              bg-white shadow-sm hover:shadow-2xl hover:shadow-brand-accent/25 
              hover:-translate-y-2 hover:border-brand-primary/30 
              transition-all duration-500 h-full text-center"
->
-  {/* Icon wrapper */}
-  <div
-    className="mx-auto mb-6 flex h-16 w-16 items-center justify-center 
+            >
+              {/* Icon wrapper */}
+              <div
+                className="mx-auto mb-6 flex h-16 w-16 items-center justify-center 
                rounded-2xl bg-brand-accent/10 text-3xl
                transition-all duration-300
                group-hover:scale-110 group-hover:bg-brand-accent/20
                group-hover:text-brand-primary"
-  >
-    <span role="img" aria-label={title}>
-      {icon}
-    </span>
-  </div>
+              >
+                <span role="img" aria-label={title}>
+                  {icon}
+                </span>
+              </div>
 
-  <h3
-    className="font-heading text-lg md:text-xl text-brand-dark 
+              <h3
+                className="font-heading text-lg md:text-xl text-brand-dark 
                font-bold mb-4 transition-colors
                group-hover:text-brand-primary"
-  >
-    {title}
-  </h3>
+              >
+                {title}
+              </h3>
 
-  <p
-    className="text-sm md:text-base text-brand-dark/80
+              <p
+                className="text-sm md:text-base text-brand-dark/80
                leading-relaxed transition-colors
                group-hover:text-brand-dark/95"
-  >
-    {desc}
-  </p>
-</div>
-
+              >
+                {desc}
+              </p>
+            </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default PartnerValue
+export default PartnerValue;

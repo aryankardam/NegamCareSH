@@ -46,21 +46,6 @@ const CareersHeader = () => {
             operating at the intersection of <strong>high-tech agriculture R&D</strong>, 
             digital supply chain solutions, and sustainable processing infrastructure.
           </p>
-          
-          {/* <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-lg md:text-xl text-brand-dark/75">
-            <div>
-              • High-tech agriculture R&D<br/>
-              • Digital agri-trading<br/>
-              • Strong university research links 
-            </div>
-            <div>
-              • Sustainable processing infrastructure<br/>
-              • Institutional partnerships<br/>
-              • Farmer ecosystem strengthening
-            </div>
-          </div> */}
-          
-          
         </div>
       </div>
 
