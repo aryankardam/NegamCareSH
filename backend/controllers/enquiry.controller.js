@@ -30,7 +30,7 @@ export const handleEnquiry = async (req, res, next) => {
 
     await sendMail({
       to: env.ENQUIRY_RECEIVER,
-      subject: "New Enquiry - Stemz Website",
+      subject: "New Enquiry - Negam Care Website",
       html,
     });
 

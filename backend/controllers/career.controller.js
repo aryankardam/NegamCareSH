@@ -14,7 +14,7 @@ export const handleCareer = async (req, res, next) => {
     }
 
     const html = `
-      <h2>New Career Application</h2>
+      <h2>New Career Application - Negam Care </h2>
       <p><b>Name:</b> ${name}</p>
       <p><b>Email:</b> ${email}</p>
       <p><b>Phone:</b> ${phone}</p>

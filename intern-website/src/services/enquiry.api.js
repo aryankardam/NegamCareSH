@@ -1,13 +1,6 @@
-import { API_BASE_URL } from "../config/api";
+import apiClient from "./apiClient";
 
-export const submitEnquiry = async (data) => {
-  const res = await fetch(`${API_BASE_URL}/api/enquiry`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-
-  return res.json();
+export const submitEnquiry = async (payload) => {
+  const { data } = await apiClient.post("/enquiry", payload);
+  return data;
 };

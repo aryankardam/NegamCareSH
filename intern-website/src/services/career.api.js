@@ -1,10 +1,6 @@
-import { API_BASE_URL } from "../config/api";
+import apiClient from "./apiClient";
 
-export const submitCareer = async (formData) => {
-  const res = await fetch(`${API_BASE_URL}/api/careers`, {
-    method: "POST",
-    body: formData, // DO NOT set headers
-  });
-
-  return res.json();
+export const submitCareerApplication = async (formData) => {
+  const { data } = await apiClient.post("/careers", formData);
+  return data;
 };
