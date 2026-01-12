@@ -1,12 +1,12 @@
 // src/components/ServicesSection/LogisticsSection.jsx
-import logisticsImg from '../../assets/images/tractor-working-agricultural-plots-3d-render.jpg'
+import logisticsImg from "../../assets/images/tractor-working-agricultural-plots-3d-render.jpg";
 
 const LogisticsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-brand-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
-         {/* Image Left*/}
-        <div className="relative group">
+        {/* Image left */}
+        <div className="order-2 lg:order-1 relative group">
           <div className="overflow-hidden rounded-3xl shadow-2xl bg-brand-primary/10">
             <img
               src={logisticsImg}
@@ -22,30 +22,36 @@ const LogisticsSection = () => {
           </div>
         </div>
 
-        {/* Text */}
-        <div>
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl 
-                        text-brand-dark font-bold mb-4">
+        {/* Text right */}
+        <div className="order-1 lg:order-2">
+          <h2
+            className="font-heading text-2xl md:text-3xl lg:text-4xl 
+                            text-brand-dark font-bold mb-4"
+          >
             Agri Sourcing, Aggregation & Logistics
           </h2>
 
           <p className="text-base md:text-lg text-brand-dark/80 leading-relaxed mb-4">
-            Negam Care operates nationwide sourcing and aggregation networks supported by multimodal logistics.
+            Negam Care operates nationwide sourcing and aggregation networks
+            supported by multimodal logistics.
           </p>
           <p className="text-base md:text-lg text-brand-dark/80 leading-relaxed mb-6">
-            This enables efficient movement, consolidation, and distribution of agricultural commodities across regions and markets.
+            This enables efficient movement, consolidation, and distribution of
+            agricultural commodities across regions and markets.
           </p>
 
-          <ul className="space-y-2 text-sm md:text-base text-brand-dark/80">
+          <div className="grid gap-4 text-sm md:text-base text-brand-dark/80">
+            <ul className="space-y-2 text-sm md:text-base text-brand-dark/80">
             <li>• Aggregation centres across producing regions</li>
             <li>• Multimodal transport (road, rail, cold chain where relevant)</li>
             <li>• Traceable movement from farm-gate to markets</li>
             <li>• Integration with digital trading and warehousing</li>
           </ul>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LogisticsSection
+export default LogisticsSection;

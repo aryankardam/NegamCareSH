@@ -1,5 +1,5 @@
 // src/components/ServicesSection/TradingSection.jsx
-import tradingImg from '../../assets/images/trading.jpg'
+import tradingImg from '../../assets/images/hand-is-holding-smartphone-with-infographics-background-plantations-sweet-bell-pepper-farming-agriculture-cultivation-harvesting-farmland-production-agricultural-products.jpg'
 
 const TradingSection = () => {
   return (
