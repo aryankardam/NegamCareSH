@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/images/hero-field.png";
+import heroImage from "../../assets/images/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed1.jpg";
 
 const Hero = () => {
   return (

@@ -1,6 +1,6 @@
 // src/components/AboutSection/AboutOverview.jsx
 import { motion } from "framer-motion";
-import overviewImage from "../../assets/images/about-overview.jpg";
+import overviewImage from "../../assets/images/farmer-using-digital-tablet-corn-crop-cultivated-field-with-smart-farming-interface-icons-light-flare-sunset-effect-smart-new-technology-agriculture-business-concept.jpg";
 
 const AboutOverview = () => {
   return (

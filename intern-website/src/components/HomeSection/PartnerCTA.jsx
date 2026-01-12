@@ -1,7 +1,7 @@
 // src/components/HomeSection/PartnerCTA.jsx - Enhanced Industry Standard
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import partnerImage from "../../assets/images/partner-with-us.jpg";
+import partnerImage from "../../assets/images/close-up-picture-hand-passing-sapling-plant-another-hand.jpg";
 
 const PartnerCTA = () => {
   const navigate = useNavigate();

@@ -10,28 +10,32 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Agricultural R&D & Seed Innovation",
-    description:
-      "Collaborative research initiatives focused on improved seed systems, cultivation practices, and applied agricultural sciences, undertaken in partnership with academic and institutional stakeholders.",
-    icon: FaSeedling,
-  },
-  {
     title: "Agri-Processing & Value Addition",
     description:
       "Processing infrastructure and operational support for drying, extraction, packaging, and product standardisation, aimed at reducing wastage and improving realisation from farm output.",
     icon: FaIndustry,
-  },
-  {
-    title: "Digital Agri-Commodity Trading",
-    description:
-      "A digital trading framework that enables transparent price discovery, structured transactions, and market access through technology-enabled platforms.",
-    icon: FaChartLine,
+    serviceLink: "/services#processing",
   },
   {
     title: "Agri Sourcing, Aggregation & Logistics",
     description:
       "Nationwide sourcing, aggregation, and multimodal logistics capabilities designed to support high-volume, structured agricultural trade.",
     icon: FaTruckMoving,
+    serviceLink: "/services#logistics",
+  },
+  {
+    title: "Agricultural R&D & Seed Innovation",
+    description:
+      "Collaborative research initiatives focused on improved seed systems, cultivation practices, and applied agricultural sciences, undertaken in partnership with academic and institutional stakeholders.",
+    icon: FaSeedling,
+    serviceLink: "/services#institutional",
+  },
+  {
+    title: "Digital Agri-Commodity Trading",
+    description:
+      "A digital trading framework that enables transparent price discovery, structured transactions, and market access through technology-enabled platforms.",
+    icon: FaChartLine,
+    serviceLink: "/services#emandi",
   },
 ];
 
@@ -86,11 +90,11 @@ const ServicesGrid = () => {
                 role="button"
                 tabIndex={0}
                 aria-label={`Learn more about ${service.title}`}
-                onClick={() => navigate("/services")}
+                onClick={() => navigate(service.serviceLink)}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
+                  if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
-                    navigate("/services");
+                    navigate(service.serviceLink);
                   }
                 }}
               >

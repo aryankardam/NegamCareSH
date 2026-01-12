@@ -1,7 +1,7 @@
 // src/components/PartnerSection/PartnerTypes.jsx - Interactive Cards with Images
-import govImg from '../../assets/images/emandi.jpg'
-import researchImg from '../../assets/images/institutional.jpg'
-import marketImg from '../../assets/images/logistics.jpg'
+import govImg from '../../assets/images/indian-farmer-with-agronomist-cotton-field-showing-some-information-tab.jpg'
+import researchImg from '../../assets/images/laboratory-mask-woman-with-plants-magnifying-glass-research-safety-medical-engineering-biotech-botany-leaves-scientist-technician-checking-agro-study-growth-science.jpg'
+import marketImg from '../../assets/images/young-plant-seedling-growing-sunlight-environmental-ecology-concept-sources-renewable-sustainable-development-digital-technology-agriculture-smart-farming-concept.jpg'
 import { GiMicroscope } from "react-icons/gi";
 import { BiSolidBank } from "react-icons/bi";
 import { TbWorld } from "react-icons/tb";

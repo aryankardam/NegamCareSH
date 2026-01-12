@@ -1,5 +1,5 @@
 // src/components/ServicesSection/ProcessingSection.jsx
-import processingImg from '../../assets/images/processing.jpg'
+import processingImg from '../../assets/images/microgreen-corundum-coriander-sprouts-male-hands-raw-sprouts-microgreens-healthy-eating-concept-man-packs-boxes.jpg'
 
 const ProcessingSection = () => {
   return (

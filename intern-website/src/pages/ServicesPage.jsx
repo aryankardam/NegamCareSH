@@ -1,4 +1,7 @@
 import React, { lazy, Suspense } from 'react';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import { motion } from "framer-motion";
 import ContactStrip from '../components/ContactStrip'
 
@@ -13,6 +16,24 @@ const EmandiSection = lazy(() => import('../components/ServicesSection/EmandiSec
 const ApplicationsStrip = lazy(() => import('../components/ServicesSection/ApplicationsStrip'));
 
 const ServicesPage = () => {
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.replace("#", "");
+    const el = document.getElementById(id);
+
+    if (el) {
+      // Immediate, no delay, no animation lag
+      el.scrollIntoView({
+        behavior: "auto",
+        block: "start",
+      });
+    }
+  }
+}, [location.hash]);
+
+
   return (
     <main className="bg-brand-white text-brand-dark overflow-x-hidden">
       {/* Services progress bar */}
@@ -92,7 +113,7 @@ const ServicesPage = () => {
         </motion.section>
 
         {/* Trading */}
-        <motion.section
+        {/* <motion.section
           id="trading"
           className="scroll-mt-20"
           initial={{ opacity: 0 }}
@@ -101,7 +122,7 @@ const ServicesPage = () => {
           transition={{ duration: 0.6 }}
         >
           <TradingSection />
-        </motion.section>
+        </motion.section> */}
 
         {/* Logistics */}
         <motion.section

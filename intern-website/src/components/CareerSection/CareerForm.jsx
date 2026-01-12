@@ -115,10 +115,10 @@ const CareerForm = () => {
 
         <div>
           <label className="block text-lg font-semibold text-brand-dark mb-3">Message</label>
-          <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className={`${inputBase} resize-vertical min-h-[120px]`} placeholder="Why Negam Care? Your experience..." />
+          <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className={`${inputBase} resize-vertical min-h-30`} placeholder="Why Negam Care? Your experience..." />
         </div>
 
-        <button type="submit" disabled={isSubmitting} className="w-full group bg-gradient-to-r from-brand-primary to-brand-accent hover:from-brand-accent hover:to-brand-primary text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 disabled:opacity-50">
+        <button type="submit" disabled={isSubmitting} className="w-full group bg-linear-to-r from-brand-primary to-brand-accent hover:from-brand-accent hover:to-brand-primary text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 disabled:opacity-50">
           {isSubmitting ? "Submitting..." : "Apply Now"}
         </button>
       </form>

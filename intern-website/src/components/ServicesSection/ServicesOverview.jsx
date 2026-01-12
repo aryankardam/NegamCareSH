@@ -8,11 +8,6 @@ const SERVICES = [
     text: 'Infrastructure and operational frameworks for drying, extraction, packaging, and quality standardisation to improve shelf life and market readiness.'
   },
   {
-    icon: FaChartLine,
-    title: 'Digital Commodity Trading (E‑mandi)',
-    text: 'Digital trading platform enabling structured, transparent agricultural transactions and price discovery integrated with existing market systems.'
-  },
-  {
     icon: FaTruck,
     title: 'Agri Sourcing, Aggregation & Logistics',
     text: 'Nationwide sourcing and aggregation networks supported by multimodal logistics for efficient movement and consolidation.'
@@ -21,7 +16,12 @@ const SERVICES = [
     icon: FaUniversity,
     title: 'Institutional & Market Enablement',
     text: 'Support for market integration through technology adoption, operational frameworks, and alignment with regulatory structures.'
-  }
+  },
+  {
+    icon: FaChartLine,
+    title: 'Digital Commodity Trading (E‑mandi)',
+    text: 'Digital trading platform enabling structured, transparent agricultural transactions and price discovery integrated with existing market systems.'
+  },
 ]
 
 const ServicesOverview = () => (

@@ -1,7 +1,7 @@
 // src/components/WhoWeAre.jsx - Enhanced Industry Standard Version
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import whoImage from "../../assets/images/who-we-are-farmers.jpg";
+import whoImage from "../../assets/images/close-up-bamboo.jpg";
 
 const WhoWeAre = () => {
   const navigate = useNavigate();

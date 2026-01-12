@@ -1,5 +1,5 @@
 // src/components/ServicesSection/EmandiSection.jsx
-import emandiImg from '../../assets/images/emandi.jpg'
+import emandiImg from '../../assets/images/hand-is-holding-smartphone-with-infographics-background-plantations-sweet-bell-pepper-farming-agriculture-cultivation-harvesting-farmland-production-agricultural-products.jpg'
 
 const EmandiSection = () => {
   return (
@@ -29,10 +29,10 @@ const EmandiSection = () => {
             <div className="grid md:grid-cols-2 gap-4 text-sm md:text-base">
               <ul className="space-y-2">
                 <li>• Direct producer–buyer marketplace</li>
-                <li>• Integration with APMC systems</li>
+                <li>• Tools for price discovery & quality assessment</li>
               </ul>
               <ul className="space-y-2">
-                <li>• Tools for price discovery & quality assessment</li>
+                <li>• Integration with APMC systems</li>
                 <li>• Access pathways for organised farmer collectives</li>
               </ul>
             </div>

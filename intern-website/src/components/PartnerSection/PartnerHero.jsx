@@ -1,5 +1,5 @@
 // src/components/PartnerSection/PartnerHero.jsx - Interactive Hero with Image
-import heroBg from "../../assets/images/about-hero-agri.png";
+import heroBg from "../../assets/images/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed1.jpg";
 
 const PartnerHero = () => {
   return (

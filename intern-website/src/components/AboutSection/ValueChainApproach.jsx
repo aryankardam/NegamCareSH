@@ -1,40 +1,7 @@
-// src/components/AboutSection/ValueChainApproach.jsx
+// src/components/AboutSection/ValueChainApproach.jsx - FIXED
 import { motion } from "framer-motion";
-import researchImage from "../../assets/images/value-chain-agri.png";
-import processingImage from "../../assets/images/value-chain-agri.png";
-import digitalTradeImage from "../../assets/images/about-overview.jpg";
-import logisticsImage from "../../assets/images/hero-collaboration.jpg";
-
-const STEPS = [
-  {
-    title: "Agricultural Research & Cultivation",
-    description:
-      "University-led and applied agricultural research focused on seed development, cultivation practices, and phytochemical applications, translated into structured on-ground cultivation programs.",
-    image: researchImage,
-    imageTitle: "Research",
-  },
-  {
-    title: "Agri Processing & Value Addition",
-    description:
-      "Value-added agri-processing infrastructure supporting extraction, drying, packaging, and export-ready product development, aimed at improving realisation and reducing post-harvest losses.",
-    image: processingImage,
-    imageTitle: "Processing",
-  },
-  {
-    title: "Digital Trade & Market Enablement",
-    description:
-      "Digital agri-commodity trading platforms enabling transparent price discovery, direct producer-buyer transactions, and integration with APMC systems, logistics, and payment infrastructure.",
-    image: digitalTradeImage,
-    imageTitle: "Digital Trade",
-  },
-  {
-    title: "Institutional Integration & Logistics",
-    description:
-      "Strengthening APMC markets, farmer producer organisations (FPOs), and institutional trade through sourcing, aggregation, and multimodal logistics support across large-scale agricultural footprints.",
-    image: logisticsImage,
-    imageTitle: "Logistics",
-  },
-];
+import { Link } from "react-router-dom"; // ← ADD THIS IMPORT
+import valueChainImage from "../../assets/images/vegetable-fresh-greenhouse-with-infographics-smart-farming-precision-agriculture-40-with-visual-icon-digital-technology-agriculture-smart-farming-concept.jpg";
 
 const ValueChainApproach = () => {
   return (
@@ -47,35 +14,41 @@ const ValueChainApproach = () => {
           linear-gradient(135deg, rgba(0, 136, 101, 0.02) 0%, transparent 70%)
         `,
       }}
+      id="value-chain"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
       {/* Animated background elements */}
       <motion.div
-        className="absolute top-1/4 -right-20 w-40 h-40 bg-gradient-to-br from-brand-primary/10 to-brand-accent/5 rounded-full blur-xl opacity-60"
+        className="absolute top-1/4 -right-20 w-40 h-40 bg-linear-to-br from-brand-primary/10 to-brand-accent/5 rounded-full blur-xl opacity-60"
         animate={{ y: [0, -15, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-10 w-32 h-32 bg-gradient-to-r from-brand-dark/8 to-brand-primary/5 rounded-full blur-lg opacity-50"
+        className="absolute bottom-1/4 left-10 w-32 h-32 bg-linear-to-r from-brand-dark/8 to-brand-primary/5 rounded-full blur-lg opacity-50"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 7, repeat: Infinity }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 md:px-6 relative z-10">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          className="mb-12 md:mb-16 lg:mb-20 max-w-3xl text-center"
+          className="mb-16 lg:mb-20 max-w-4xl text-center mx-auto"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <motion.div className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary/10 backdrop-blur-sm rounded-full border border-brand-primary/20 text-sm font-semibold text-brand-primary mb-8 max-w-max mx-auto">
+            <div className="w-2 h-2 bg-brand-accent rounded-full animate-pulse" />
+            Our Integrated Approach
+          </motion.div>
+
           <motion.h2
-            className="font-heading text-3xl md:text-4xl lg:text-5xl 
-                       bg-gradient-to-r from-brand-dark via-brand-primary to-brand-accent 
-                       bg-clip-text text-transparent mb-6 drop-shadow-lg"
+            className="font-heading text-4xl md:text-4xl lg:text-5xl xl:text-6xl 
+                       bg-linear-to-r from-brand-dark via-brand-primary to-brand-accent 
+                       bg-clip-text text-transparent mb-8 drop-shadow-2xl leading-tight"
             whileInView={{ scale: [1, 1.02, 1] }}
             transition={{
               duration: 2,
@@ -83,127 +56,108 @@ const ValueChainApproach = () => {
               repeatType: "reverse",
             }}
           >
-            Integrated Agri Value-Chain Approach
+            Our Approach to Agri-Value Chains
           </motion.h2>
 
           <motion.p
             className="text-lg md:text-xl lg:text-2xl 
-                       text-brand-dark/80 leading-relaxed font-medium max-w-2xl mx-auto"
+                       text-brand-dark/90 leading-relaxed font-medium max-w-3xl mx-auto px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Negam Care operates across the agricultural value chain by
-            integrating research, cultivation, processing, and digital trade
-            within a single, structured operating framework.
+            Negam Care follows an integrated value-chain approach that aligns
+            upstream cultivation and research initiatives with downstream
+            processing and market access. This model ensures continuity from
+            farm-level practices to end-market engagement, supported by
+            technology, institutional partnerships, and operational
+            infrastructure.
           </motion.p>
         </motion.div>
 
-        {/* Steps Grid - [CONTENT -- IMAGE] pairs */}
-        <div className="space-y-6 lg:space-y-8">
-          {STEPS.map((step, index) => (
+        {/* Value Chain Visual */}
+        <motion.div
+          className="w-full max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div
+            className="relative overflow-hidden rounded-3xl shadow-2xl 
+               group bg-linear-to-br from-white/60 to-white/30 backdrop-blur-xl 
+               border border-white/50 hover:border-brand-primary/40 
+               lg:hover:shadow-[0_35px_60px_rgba(0,0,0,0.15)]"
+            whileHover={{
+              scale: 1.02,
+              y: -8,
+              transition: { duration: 0.4, ease: "easeOut" },
+            }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <motion.img
+              src={valueChainImage}
+              alt="Integrated agri-value chain: research, cultivation, processing, digital trade, and logistics"
+              className="w-full h-75 sm:h-87.5 md:h-100 lg:h-112.5 xl:h-125 
+                  object-cover group-hover:scale-[1.05] transition-transform duration-700"
+              loading="lazy"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            />
+
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/30 via-black/0 to-transparent" />
+
+            {/* Responsive caption */}
             <motion.div
-              key={step.title}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-12 
+                 bg-white/95 backdrop-blur-xl px-5 py-3 sm:px-6 sm:py-4 
+                 rounded-2xl shadow-2xl border border-white/60 max-w-sm"
+              whileHover={{ scale: 1.03, y: -2 }}
+              transition={{ duration: 0.3 }}
             >
-              {/* Content (LEFT) */}
-              <motion.div
-                className="group relative pl-8 lg:pl-10 py-6 lg:py-8 rounded-2xl 
-                           bg-brand-white/60 backdrop-blur-sm border border-brand-primary/10 
-                           hover:bg-brand-white hover:shadow-lg hover:border-brand-primary/25 
-                           hover:-translate-y-1 transition-all duration-400 cursor-default lg:hover:-translate-x-2"
+              <p
+                className="text-xs sm:text-sm lg:text-base font-semibold tracking-wide
+                     bg-linear-to-r from-brand-primary via-brand-accent to-brand-dark 
+                     bg-clip-text text-transparent leading-tight"
               >
-                {/* Step Number */}
-                <motion.div
-                  className="absolute -left-8 top-6 w-6 h-6 lg:w-8 lg:h-8 flex items-center 
-                             justify-center rounded-full bg-brand-primary text-brand-dark 
-                             font-bold text-xs lg:text-sm shadow-lg"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    backgroundColor: [
-                      "color:var(--color-brand-primary)",
-                      "color:var(--color-brand-accent)",
-                      "color:var(--color-brand-primary)",
-                    ],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  {index + 1}
-                </motion.div>
-
-                {/* Content */}
-                <motion.h3
-                  className="font-heading text-xl md:text-2xl lg:text-3xl 
-                             text-brand-dark mb-3 leading-tight group-hover:text-brand-primary"
-                  whileHover={{ color: "color:var(--color-brand-primary)" }}
-                >
-                  {step.title}
-                </motion.h3>
-                <motion.p
-                  className="text-base md:text-lg lg:text-xl 
-                             text-brand-dark/80 leading-relaxed"
-                  whileHover={{ color: "color:var(--color-brand-dark)" }}
-                >
-                  {step.description}
-                </motion.p>
-              </motion.div>
-
-              {/* Image (RIGHT - Directly opposite) */}
-              <motion.div
-                className="relative overflow-hidden rounded-3xl 
-                           bg-brand-white/70 backdrop-blur-xl shadow-2xl 
-                           border-4 border-brand-white/40 hover:border-brand-primary/30
-                           hover:shadow-brand-primary/10 hover:-translate-y-1 transition-all duration-500 cursor-pointer lg:hover:translate-x-2"
-                whileHover={{ scale: 1.02 }}
-              >
-                <motion.img
-                  src={`${step.image}`}
-                  alt={`${step.title} - Visual representation`}
-                  className="w-full h-48 md:h-56 lg:h-64 object-cover transition-transform duration-700 hover:scale-105"
-                  loading="lazy"
-                />
-
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-transparent" />
-
-                {/* Step Label */}
-                {/* <motion.div
-                  className="absolute bottom-4 left-14 right-14 
-                             bg-brand-white/95 backdrop-blur-xl px-4 py-2 rounded-xl shadow-2xl 
-                             border border-brand-white/50"
-                  whileHover={{ scale: 1.02, y: -1 }}
-                >
-                  <motion.p
-                    className="text-xs md:text-sm font-semibold 
-                               bg-gradient-to-r from-brand-primary to-brand-accent 
-                               bg-clip-text text-transparent font-medium"
-                    whileInView={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    {step.imageTitle}
-                  </motion.p>
-                </motion.div> */}
-                <motion.div
-                  className="absolute bottom-4 left-4 bg-white/90
-                           text-brand-dark px-3 py-1 rounded-xl text-xs font-bold 
-                             shadow-lg border-2 border-white/50"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  {step.imageTitle}
-                </motion.div>
-              </motion.div>
+                Research → Processing → Digital Trade → Logistics
+              </p>
             </motion.div>
-          ))}
-        </div>
+          </motion.div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Link // ← NOW WORKS!
+            to="/services"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r 
+                       from-brand-primary to-brand-accent hover:from-brand-accent hover:to-brand-primary
+                       text-white font-bold text-lg uppercase tracking-wider rounded-2xl shadow-xl 
+                       hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300"
+          >
+            Explore Our Services
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </Link>
+        </motion.div>
       </div>
     </motion.section>
   );
