@@ -12,7 +12,7 @@ const ProcessingSection = lazy(() => import('../components/ServicesSection/Proce
 const LogisticsSection = lazy(() => import('../components/ServicesSection/LogisticsSection'));
 const InstitutionalSection = lazy(() => import('../components/ServicesSection/InstitutionalSection'));
 const ApplicationsStrip = lazy(() => import('../components/ServicesSection/ApplicationsStrip'));
-const AgroforestrySection = lazy(() => import('../components/ServicesSection/AgroforestrySection'));
+const AgroForestrySection = lazy(() => import('../components/ServicesSection/AgroForestrySection'));
 
 const ServicesPage = () => {
   const location = useLocation();
@@ -156,7 +156,7 @@ useEffect(() => {
           viewport={{ once: true, margin: "-20%" }}
           transition={{ duration: 0.6 }}
         >
-          <AgroforestrySection />
+          <AgroForestrySection />
         </motion.section>
 
         {/* Applications */}
