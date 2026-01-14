@@ -1,5 +1,6 @@
 // src/components/ServicesSection/ServicesOverview.jsx
-import { FaSeedling, FaIndustry, FaChartLine, FaTruck, FaUniversity } from 'react-icons/fa'
+import { FaIndustry, FaTruck, FaUniversity } from 'react-icons/fa'
+import { GiBamboo } from "react-icons/gi";
 
 const SERVICES = [
   {
@@ -18,9 +19,9 @@ const SERVICES = [
     text: 'Support for market integration through technology adoption, operational frameworks, and alignment with regulatory structures.'
   },
   {
-    icon: FaChartLine,
-    title: 'Digital Commodity Trading (E‑mandi)',
-    text: 'Digital trading platform enabling structured, transparent agricultural transactions and price discovery integrated with existing market systems.'
+    icon: GiBamboo,
+    title: 'Agroforestry',
+    text: 'Structured integration of perennial plantations into farming systems to support sustainable land use, improved productivity, and long-term income generation.'
   },
 ]
 

@@ -9,11 +9,10 @@ import ContactStrip from '../components/ContactStrip'
 const ServicesHero = lazy(() => import('../components/ServicesSection/ServicesHero'));
 const ServicesOverview = lazy(() => import('../components/ServicesSection/ServicesOverview'));
 const ProcessingSection = lazy(() => import('../components/ServicesSection/ProcessingSection'));
-const TradingSection = lazy(() => import('../components/ServicesSection/TradingSection'));
 const LogisticsSection = lazy(() => import('../components/ServicesSection/LogisticsSection'));
 const InstitutionalSection = lazy(() => import('../components/ServicesSection/InstitutionalSection'));
-const EmandiSection = lazy(() => import('../components/ServicesSection/EmandiSection'));
 const ApplicationsStrip = lazy(() => import('../components/ServicesSection/ApplicationsStrip'));
+const AgroforestrySection = lazy(() => import('../components/ServicesSection/AgroforestrySection'));
 
 const ServicesPage = () => {
   const location = useLocation();
@@ -148,16 +147,16 @@ useEffect(() => {
           <InstitutionalSection />
         </motion.section>
 
-        {/* Emandi */}
+        {/* Agroforestry */}
         <motion.section
-          id="emandi"
+          id="agroforestry"
           className="scroll-mt-20"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20%" }}
           transition={{ duration: 0.6 }}
         >
-          <EmandiSection />
+          <AgroforestrySection />
         </motion.section>
 
         {/* Applications */}

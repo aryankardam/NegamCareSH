@@ -1,7 +1,7 @@
 // src/components/WhoWeAre.jsx - Enhanced Industry Standard Version
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import whoImage from "../../assets/images/close-up-bamboo.jpg";
+import whoImage from "../../assets/images/bamboocloseup-green-bamboo-trees.jpg";
 
 const WhoWeAre = () => {
   const navigate = useNavigate();
@@ -46,8 +46,7 @@ const WhoWeAre = () => {
                     Agri-Tech Intersection
                   </h3>
                   <p className="text-base md:text-lg text-white/95 leading-relaxed">
-                    Negam Care operates at agriculture ↔ technology intersection, 
-                    integrating research, value-added processing, and digital market enablement.
+                    Negam Care operates at the intersection of agriculture and technology, integrating research, value-added processing, and digital market enablement.
                   </p>
                 </div>
 
@@ -56,8 +55,7 @@ const WhoWeAre = () => {
                     Innovation to Impact
                   </h3>
                   <p className="text-base md:text-lg text-white/95 leading-relaxed">
-                    Institutional collaboration + on-ground execution = measurable outcomes 
-                    across cultivation, processing, and trade ecosystems.
+                    Institutional collaboration combined with strong on-ground execution delivers measurable outcomes across value chains and agriculture ecosystem.
                   </p>
                 </div>
               </div>

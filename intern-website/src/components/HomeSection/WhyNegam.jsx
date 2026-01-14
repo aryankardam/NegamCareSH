@@ -1,7 +1,7 @@
 // src/components/HomeSection/WhyNegam.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
-import valueImage from "../../assets/images/close-up-areca-palm-stem.jpg";
+import valueImage from "../../assets/images/hand-holding-smartphone-front-lush-green-plant-field-nature-technology-concept.jpg";
 
 const valuePoints = [
   "Research-led decision-making across agricultural value chains",

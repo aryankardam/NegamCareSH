@@ -2,9 +2,9 @@
 import {
   FaSeedling,
   FaIndustry,
-  FaChartLine,
   FaTruckMoving,
 } from "react-icons/fa";
+import { GiBamboo } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -31,11 +31,11 @@ const services = [
     serviceLink: "/services#institutional",
   },
   {
-    title: "Digital Agri-Commodity Trading",
+    title: "Agroforestry",
     description:
-      "A digital trading framework that enables transparent price discovery, structured transactions, and market access through technology-enabled platforms.",
-    icon: FaChartLine,
-    serviceLink: "/services#emandi",
+      "An integrated agroforestry approach that combines perennial plantations with structured farming systems to improve soil health, enhance land productivity, and create sustainable, climate-resilient income opportunities.",
+    icon: GiBamboo,
+    serviceLink: "/services#agroforestry",
   },
 ];
 

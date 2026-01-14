@@ -107,10 +107,10 @@ const Hero = () => {
           >
             Integrating{" "}
             <motion.strong
-              className="text-brand-accent font-semibold inline-block"
+              className="text-brand-accent font-semibold"
               whileHover={{ scale: 1.05 }}
             >
-              research ↔ processing ↔ digital trade
+            research, processing, and technology enabled trade
             </motion.strong>{" "}
             to create transparent, scalable and sustainable agricultural
             ecosystems.
