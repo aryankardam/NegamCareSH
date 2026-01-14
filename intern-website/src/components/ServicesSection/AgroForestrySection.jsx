@@ -10,12 +10,12 @@ const AgroforestrySection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-linear-to-br from-green-900 via-brand-dark to-gray-900 text-brand-white">
+    <section className="py-16 md:py-24 bg-brand-dark text-brand-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Layout */}
         <div className="grid gap-14 lg:grid-cols-[420px_1fr] items-start">
           {/* IMAGE — LEFT */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative group order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl bg-black/20">
               <img
                 src={agroforestryImg}
@@ -24,7 +24,9 @@ const AgroforestrySection = () => {
                   w-full
                   h-130
                   lg:h-155
-                  object-cover
+                  object-cover 
+                  group-hover:scale-105 
+                  transition-transform duration-700
                   object-center
                 "
                 loading="lazy"
@@ -41,7 +43,7 @@ const AgroforestrySection = () => {
           <div className="max-w-3xl space-y-8 order-1 lg:order-2">
             {/* Title */}
             <header className="space-y-4">
-              <span className="inline-flex px-4 py-2 rounded-full bg-emerald-400/20 border border-emerald-400/30 text-xs font-semibold uppercase tracking-wide text-emerald-100">
+              <span className="inline-flex px-4 py-2 rounded-full bg-emerald-400/20 border border-emerald-400/30 text-xs font-semibold uppercase tracking-wide ">
                 Sustainable Farming
               </span>
 
@@ -85,9 +87,9 @@ const AgroforestrySection = () => {
                     key={index}
                     className="
                       group flex items-start gap-3 p-4
-                      rounded-xl bg-white/5 backdrop-blur-sm
-                      border border-white/10
-                      hover:bg-white/10
+                      rounded-xl bg-brand-white/5 backdrop-blur-sm
+                      border border-brand-white/10
+                      hover:bg-brand-white/10
                       transition-all duration-300
                       hover:scale-[1.02]
                     "
