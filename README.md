@@ -5,13 +5,13 @@ The application is designed to support informational pages along with **Contact 
 
 ---
 
-## 🔗 Live (Development)
+## Live (Development)
 Frontend (Vercel – Dev):  
 https://negam-care-sh.vercel.app/
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The Negam Care website is a modern, responsive, and scalable web application built using a **React + Node.js** stack.
 
@@ -25,7 +25,7 @@ The Negam Care website is a modern, responsive, and scalable web application bui
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React.js (v19)**  
@@ -45,7 +45,7 @@ The Negam Care website is a modern, responsive, and scalable web application bui
 
 ---
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```
 NegamCareSH/
@@ -67,7 +67,7 @@ NegamCareSH/
 ```
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Health Check
 GET /api/health
